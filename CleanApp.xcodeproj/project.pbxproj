@@ -10,9 +10,10 @@
 		BB260E9127B7135300A089F2 /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB260E9027B7135300A089F2 /* AddAccount.swift */; };
 		BB260E9327B714F300A089F2 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB260E9227B714F300A089F2 /* AccountModel.swift */; };
 		BB260EA127B7159600A089F2 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB260E9927B7159600A089F2 /* Data.framework */; };
-		BB260EA627B7159600A089F2 /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB260EA527B7159600A089F2 /* DataTests.swift */; };
+		BB260EA627B7159600A089F2 /* RemoteAddAccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB260EA527B7159600A089F2 /* RemoteAddAccountTests.swift */; };
 		BB260EAF27B715FC00A089F2 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB260E8727B7126000A089F2 /* Domain.framework */; };
 		BB260EB027B715FC00A089F2 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB260E8727B7126000A089F2 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BB260EB427B7162500A089F2 /* RemoteAddAccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB260EA527B7159600A089F2 /* RemoteAddAccountTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +53,7 @@
 		BB260E9227B714F300A089F2 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		BB260E9927B7159600A089F2 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB260EA027B7159600A089F2 /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB260EA527B7159600A089F2 /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
+		BB260EA527B7159600A089F2 /* RemoteAddAccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccountTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +123,7 @@
 		BB260EA427B7159600A089F2 /* DataTests */ = {
 			isa = PBXGroup;
 			children = (
-				BB260EA527B7159600A089F2 /* DataTests.swift */,
+				BB260EA527B7159600A089F2 /* RemoteAddAccountTests.swift */,
 			);
 			path = DataTests;
 			sourceTree = "<group>";
@@ -289,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB260EB427B7162500A089F2 /* RemoteAddAccountTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB260EA627B7159600A089F2 /* DataTests.swift in Sources */,
+				BB260EA627B7159600A089F2 /* RemoteAddAccountTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +356,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -418,6 +421,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -552,6 +556,7 @@
 		BB260EAC27B7159600A089F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 56EQ48SVZJ;
@@ -567,6 +572,7 @@
 		BB260EAD27B7159600A089F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 56EQ48SVZJ;

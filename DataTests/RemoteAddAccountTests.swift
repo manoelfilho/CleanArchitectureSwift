@@ -44,9 +44,13 @@ class RemoteAddAccountTests: XCTestCase {
         let httpClientSpy = HttpClientSpy()
         let sut = RemoteAddAccount(url: url, httpClient: httpClientSpy)
         sut.add()
-        
         XCTAssertEqual(httpClientSpy.url, url)
+    
     }
+
+}
+
+extension RemoteAddAccountTests {
     
     class HttpClientSpy: HttpPostClient {
         var url: URL?
@@ -54,5 +58,5 @@ class RemoteAddAccountTests: XCTestCase {
             self.url = url
         }
     }
-
+    
 }
