@@ -7,6 +7,7 @@
  */
 
 import XCTest
+import Domain
 
 class RemoteAddAccount {
     private let url: URL
@@ -16,13 +17,14 @@ class RemoteAddAccount {
         self.url = url
         self.httpClient = httpClient
     }
-    func add(){
-        httpClient.post(url: self.url)
+    func add(addAccountModel: AddAccountModel){
+        let data = try? JSONEncoder().encode(addAccountModel)
+        httpClient.post(to: url, with: data)
     }
 }
 
 protocol HttpPostClient {
-    func post(url: URL)
+    func post(to url: URL, with data: Data?)
 }
 
 class RemoteAddAccountTests: XCTestCase {
@@ -35,16 +37,45 @@ class RemoteAddAccountTests: XCTestCase {
         url:URL e httpClient: HttpClientSpy está como parametro da classe RemoteAddAccount por que ela é uma implementacao do Protocolo AddAccount. A responsabilidade de criar esse tipo é o construtor da classe. Devemos focar apenas na assinatura do protocolo e nada mais.
      
         
-     
      */
     
+    /*
+     Testa se a URL encaminhada pelo SUT(RemoteAddAccount) para o HttpClient é a mesma recebida em HttpClient
+     */
     func test_add_should_call_http_client_with_correct_url() throws {
         
         let url = URL(string: "http://any-url.com")!
         let httpClientSpy = HttpClientSpy()
         let sut = RemoteAddAccount(url: url, httpClient: httpClientSpy)
-        sut.add()
+        let addAccountModel = AddAccountModel(
+            name: "name",
+            email: "email@email.com",
+            password: "password",
+            passwordConfirmation: "password"
+        )
+        sut.add(addAccountModel: addAccountModel)
         XCTAssertEqual(httpClientSpy.url, url)
+    
+    }
+    
+    /*
+        Testa se o model encaminhado pelo SUT (RemoteAddAccount) para o HttpClient corresponde ao Data de HttpClient apos convertido
+     */
+    func test_add_should_call_http_client_with_correct_data() throws {
+        
+        let httpClientSpy = HttpClientSpy()
+        let sut = RemoteAddAccount(url: URL(string: "http://any-url.com")!, httpClient: httpClientSpy)
+        let addAccountModel = AddAccountModel(
+            name: "name",
+            email: "email@email.com",
+            password: "password",
+            passwordConfirmation: "password"
+        )
+        sut.add(addAccountModel: addAccountModel)
+        
+        let data = try? JSONEncoder().encode(addAccountModel)
+        
+        XCTAssertEqual(httpClientSpy.data, data)
     
     }
 
@@ -54,8 +85,11 @@ extension RemoteAddAccountTests {
     
     class HttpClientSpy: HttpPostClient {
         var url: URL?
-        func post(url: URL) {
+        var data: Data?
+        
+        func post(to url: URL, with data: Data?) {
             self.url = url
+            self.data = data
         }
     }
     
