@@ -43,8 +43,10 @@ class RemoteAddAccountTests: XCTestCase {
         No swift usamos os closures/ escaping para lidar com acoes assim, portanto são assincronas.
         Para simular o retorno de um closure, devemos colocar a funcao que simula o erro no Spy e no teste
         usar o recurso do expectation
-     */
-    func test_add_should_complete_with_error_if_clients_completes_with_error(){
+     
+     metodo modificado para usar a abstracao abaixo...
+    
+     func test_add_should_complete_with_error_if_clients_completes_with_error(){
         let (sut, httpClientSpy) = makeSut()
         let addAccountModel = makeAddAccountModel()
         let exp = expectation(description: "waiting")
@@ -58,12 +60,21 @@ class RemoteAddAccountTests: XCTestCase {
         httpClientSpy.completeWithError(.noConnectivity)
         wait(for: [exp], timeout: 1)
     }
+    */
+    
+    func test_add_should_complete_with_error_if_clients_completes_with_error(){
+        let (sut, httpClientSpy) = makeSut()
+        expec(sut, completeWith: .failure(.unexpected), when: {
+            httpClientSpy.completeWithError(.noConnectivity)
+        })
+    }
     
     /*
         Simula um objeto válido de AccountModel -> que provém do makeAccountModel
         Utiliza desse mode para validar se um sucesso do HttpClient retorna um obj válido
-     */
-    
+     
+        metodo modificado para usar a abstracao abaixo...
+
     func test_add_should_complete_with_account_if_clients_completes_with_valid_data(){
         let (sut, httpClientSpy) = makeSut()
         let addAccountModel = makeAddAccountModel()
@@ -81,23 +92,22 @@ class RemoteAddAccountTests: XCTestCase {
         httpClientSpy.completeWithData(expectedAccount.toData()!)
         wait(for: [exp], timeout: 1)
     }
+     
+     */
+    
+    func test_add_should_complete_with_account_if_clients_completes_with_valid_data(){
+        let (sut, httpClientSpy) = makeSut()
+        let account = makeAccountModel()
+        expec(sut, completeWith: .success(account), when: {
+            httpClientSpy.completeWithData(account.toData()!)
+        })
+    }
     
     func test_add_should_complete_with_account_if_clients_completes_with_invalid_data(){
         let (sut, httpClientSpy) = makeSut()
-        let addAccountModel = makeAddAccountModel()
-        let exp = expectation(description: "waiting")
-        
-        let expectedAccount = makeAccountModel()
-        
-        sut.add(addAccountModel: addAccountModel) { result in
-            switch result {
-            case .failure(let error): XCTAssertEqual(error, .unexpected)
-            case .success: XCTFail("Expected error and receive a result \(result) instead")
-            }
-            exp.fulfill()
-        }
-        httpClientSpy.completeWithData(Data("invalid_data".utf8))
-        wait(for: [exp], timeout: 1)
+        expec(sut, completeWith: .failure(.unexpected), when: {
+            httpClientSpy.completeWithData(Data("invalid_data".utf8))
+        })
     }
 
 }
@@ -110,6 +120,7 @@ extension RemoteAddAccountTests {
         return (sut, httpClientSpy)
     }
     
+    //Simula um HttpPost. É um mok de alguma classe que nao existe
     class HttpClientSpy: HttpPostClient {
         var urls = [URL]()
         var data: Data?
@@ -132,6 +143,7 @@ extension RemoteAddAccountTests {
         }
     }
     
+    //Simula um AddAccountModel
     func makeAddAccountModel() -> AddAccountModel {
         return AddAccountModel(
             name: "name",
@@ -141,6 +153,7 @@ extension RemoteAddAccountTests {
         )
     }
     
+    //simula um AccountModel
     func makeAccountModel() -> AccountModel {
         return AccountModel(
             id: "",
@@ -149,6 +162,23 @@ extension RemoteAddAccountTests {
             password: "password",
             passwordConfirmation: "password"
         )
+    }
+    
+    
+    //abstracao para testar remoteAddAccount
+    func expec(_ sut: RemoteAddAccount, completeWith expectResult: Result<AccountModel, DomainError>, when action:() -> Void){
+        let exp = expectation(description: "waiting")
+        sut.add(addAccountModel: makeAddAccountModel()) { receivedResult in
+            switch (expectResult, receivedResult) {
+                case (.failure(let expectError), .failure(let receivedError)): XCTAssertEqual(expectError, receivedError)
+                case (.success(let expectAccount), .success(let receivedAccount)): XCTAssertEqual(expectAccount, receivedAccount)
+                
+                default: XCTFail("Expected \(expectResult) and receive a \(receivedResult) instead")
+            }
+            exp.fulfill()
+        }
+        action()
+        wait(for: [exp], timeout: 1)
     }
     
 }
