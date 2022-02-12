@@ -11,15 +11,11 @@ import Domain
 import Data
 
 class RemoteAddAccountTests: XCTestCase {
-
     
     /*
         Informacoes importantes:
         ------------------------
-        
         url:URL e httpClient: HttpClientSpy está como parametro da classe RemoteAddAccount por que ela é uma implementacao do Protocolo AddAccount. A responsabilidade de criar esse tipo é o construtor da classe. Devemos focar apenas na assinatura do protocolo e nada mais.
-     
-        
      */
     
     /*
@@ -42,12 +38,21 @@ class RemoteAddAccountTests: XCTestCase {
         XCTAssertEqual(httpClientSpy.data, addAccountModel.toData())
     }
     
-    func test_add_should_complete_with_error_if_clients_fails(){
+    /*
+        Testa se o arquivo de producao (SUT) completa com erro no caso do Client HTTPCLientPost falhar
+        No swift usamos os closures/ escaping para lidar com acoes assim, portanto são assincronas.
+        Para simular o retorno de um closure, devemos colocar a funcao que simula o erro no Spy e no teste
+        usar o recurso do expectation
+     */
+    func test_add_should_complete_with_error_if_clients_completes_with_error(){
         let (sut, httpClientSpy) = makeSut()
         let addAccountModel = makeAddAccountModel()
         let exp = expectation(description: "waiting")
-        sut.add(addAccountModel: addAccountModel) { error in
-            XCTAssertEqual(error, .unexpected)
+        sut.add(addAccountModel: addAccountModel) { result in
+            switch result {
+                case .failure(let error): XCTAssertEqual(error, .unexpected)
+                case .success: XCTFail("Expected error and receive a result \(result) instead")
+            }
             exp.fulfill()
         }
         httpClientSpy.completeWithError(.noConnectivity)
@@ -67,9 +72,9 @@ extension RemoteAddAccountTests {
     class HttpClientSpy: HttpPostClient {
         var urls = [URL]()
         var data: Data?
-        var completion: ((HttpError) -> Void)?
+        var completion: ((Result<Data, HttpError>) -> Void)?
         
-        func post(to url: URL, with data: Data?, completion: @escaping (HttpError) -> Void) {
+        func post(to url: URL, with data: Data?, completion: @escaping (Result<Data, HttpError>) -> Void) {
             self.urls.append(url)
             self.data = data
             self.completion = completion
@@ -79,7 +84,7 @@ extension RemoteAddAccountTests {
             Simula completions / closures com erros
          */
         func completeWithError( _ error: HttpError){
-            completion?(error)
+            completion?(.failure(error))
         }
     }
     
