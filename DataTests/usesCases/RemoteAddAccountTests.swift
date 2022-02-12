@@ -28,7 +28,7 @@ class RemoteAddAccountTests: XCTestCase {
     func test_add_should_call_http_client_with_correct_url() throws {
         let url = URL(string: "http://any-url.com.br")!
         let (sut, httpClientSpy) = makeSut()
-        sut.add(addAccountModel: makeAddAccountModel())
+        sut.add(addAccountModel: makeAddAccountModel()){ _ in }
         XCTAssertEqual(httpClientSpy.urls, [url])
     }
     
@@ -38,8 +38,20 @@ class RemoteAddAccountTests: XCTestCase {
     func test_add_should_call_http_client_with_correct_data() throws {
         let (sut, httpClientSpy) = makeSut()
         let addAccountModel = makeAddAccountModel()
-        sut.add(addAccountModel: addAccountModel)
+        sut.add(addAccountModel: addAccountModel){ _ in }
         XCTAssertEqual(httpClientSpy.data, addAccountModel.toData())
+    }
+    
+    func test_add_should_complete_with_error_if_clients_fails(){
+        let (sut, httpClientSpy) = makeSut()
+        let addAccountModel = makeAddAccountModel()
+        let exp = expectation(description: "waiting")
+        sut.add(addAccountModel: addAccountModel) { error in
+            XCTAssertEqual(error, .unexpected)
+            exp.fulfill()
+        }
+        httpClientSpy.completeWithError(.noConnectivity)
+        wait(for: [exp], timeout: 1)
     }
 
 }
@@ -55,10 +67,19 @@ extension RemoteAddAccountTests {
     class HttpClientSpy: HttpPostClient {
         var urls = [URL]()
         var data: Data?
+        var completion: ((HttpError) -> Void)?
         
-        func post(to url: URL, with data: Data?) {
+        func post(to url: URL, with data: Data?, completion: @escaping (HttpError) -> Void) {
             self.urls.append(url)
             self.data = data
+            self.completion = completion
+        }
+        
+        /*
+            Simula completions / closures com erros
+         */
+        func completeWithError( _ error: HttpError){
+            completion?(error)
         }
     }
     
