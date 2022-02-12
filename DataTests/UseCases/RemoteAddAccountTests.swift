@@ -139,10 +139,19 @@ class RemoteAddAccountTests: XCTestCase {
 
 extension RemoteAddAccountTests {
     
-    func makeSut(url: URL = URL(string: "http://any-url.com.br")!) -> (sut: RemoteAddAccount, httpClientSpy: HttpClientSpy){
+    func makeSut(url: URL = URL(string: "http://any-url.com.br")!, file: StaticString = #filePath, line: UInt = #line) -> (sut: RemoteAddAccount, httpClientSpy: HttpClientSpy){
         let httpClientSpy = HttpClientSpy()
         let sut = RemoteAddAccount(url: url, httpClient: httpClientSpy)
+        checkMemoryLeak(for: sut, file: file, line: line)
+        checkMemoryLeak(for: httpClientSpy, file: file, line: line)
         return (sut, httpClientSpy)
+    }
+    
+    func checkMemoryLeak(for instance: AnyObject, file: StaticString = #filePath, line: UInt = #line){
+        //utilitário dos testes do swift. Rodam sempre no final de cada teste
+        addTeardownBlock { [weak instance] in
+            XCTAssertNil(instance, file: file, line: line) //garantindo que no final do teste o SUT é nulo. Preciso dizer que SUT é weak!
+        }
     }
     
     //Simula um HttpPost. É um mok de alguma classe que nao existe
