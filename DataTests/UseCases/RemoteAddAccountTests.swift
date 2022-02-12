@@ -189,15 +189,19 @@ extension RemoteAddAccountTests {
         )
     }
     
-    //abstracao para testar remoteAddAccount
-    func expec(_ sut: RemoteAddAccount, completeWith expectResult: Result<AccountModel, DomainError>, when action:() -> Void){
+    /*
+        Abstracao para testar remoteAddAccount
+        SOBRE o file: StaticString = #filePath, line: UInt = #line
+        Essas duas propriedades podem ser chamadas em qualquer método de uma classe de testes. Dará acesso a linha on o erro ocorreu.
+    */
+    func expec(_ sut: RemoteAddAccount, completeWith expectResult: Result<AccountModel, DomainError>, when action:() -> Void, file: StaticString = #filePath, line: UInt = #line){
         let exp = expectation(description: "waiting")
         sut.add(addAccountModel: makeAddAccountModel()) { receivedResult in
             switch (expectResult, receivedResult) {
-                case (.failure(let expectError), .failure(let receivedError)): XCTAssertEqual(expectError, receivedError)
-                case (.success(let expectAccount), .success(let receivedAccount)): XCTAssertEqual(expectAccount, receivedAccount)
+                case (.failure(let expectError), .failure(let receivedError)): XCTAssertEqual(expectError, receivedError, file: file, line: line)
+                case (.success(let expectAccount), .success(let receivedAccount)): XCTAssertEqual(expectAccount, receivedAccount, file: file, line: line)
                 
-                default: XCTFail("Expected \(expectResult) and receive a \(receivedResult) instead")
+                default: XCTFail("Expected \(expectResult) and receive a \(receivedResult) instead", file: file, line: line)
             }
             exp.fulfill()
         }
