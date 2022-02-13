@@ -147,36 +147,6 @@ extension RemoteAddAccountTests {
         return (sut, httpClientSpy)
     }
     
-    func checkMemoryLeak(for instance: AnyObject, file: StaticString = #filePath, line: UInt = #line){
-        //utilitário dos testes do swift. Rodam sempre no final de cada teste
-        addTeardownBlock { [weak instance] in
-            XCTAssertNil(instance, file: file, line: line) //garantindo que no final do teste o SUT é nulo. Preciso dizer que SUT é weak!
-        }
-    }
-    
-    //Simula um HttpPost. É um mok de alguma classe que nao existe
-    class HttpClientSpy: HttpPostClient {
-        var urls = [URL]()
-        var data: Data?
-        var completion: ((Result<Data, HttpError>) -> Void)?
-        
-        func post(to url: URL, with data: Data?, completion: @escaping (Result<Data, HttpError>) -> Void) {
-            self.urls.append(url)
-            self.data = data
-            self.completion = completion
-        }
-        
-        /*
-            Simula completions / closures com erros
-         */
-        func completeWithError( _ error: HttpError){
-            completion?(.failure(error))
-        }
-        func completeWithData( _ data: Data){
-            completion?(.success(data))
-        }
-    }
-    
     //Simula um AddAccountModel
     func makeAddAccountModel() -> AddAccountModel {
         return AddAccountModel(
@@ -216,14 +186,6 @@ extension RemoteAddAccountTests {
         }
         action()
         wait(for: [exp], timeout: 1)
-    }
-    
-    func makeInvalidData() -> Data{
-        return Data("invalid_data".utf8)
-    }
-    
-    func makeUrl() -> URL {
-        return URL(string: "http://any-url.com.br")!
     }
     
 }
