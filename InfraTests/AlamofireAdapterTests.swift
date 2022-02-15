@@ -27,13 +27,7 @@ class AlamofireAdapterTests: XCTestCase {
     func test_post_should_make_request_with_valid_url_and_method(){
         
         let url = makeUrl()
-        
-        //definimos uma configuracao customizada para o Session do Alamofire.
-        //assim ele não faz a conexao padrao e sim uma fake
-        let configuration = URLSessionConfiguration.default
-        configuration.protocolClasses = [UrlProtocolStub.self]
-        let session = Session(configuration: configuration)
-        let sut = AlamoFireAdapter(session: session)
+        let sut = makeSut()
         sut.post(to: url, with: makeValidData())
         let exp = expectation(description: "waiting")
         UrlProtocolStub.observeRequest { request in
@@ -46,16 +40,8 @@ class AlamofireAdapterTests: XCTestCase {
     }
     
     func test_post_should_make_request_with_no_data(){
-        
-        let url = makeUrl()
-        
-        //definimos uma configuracao customizada para o Session do Alamofire.
-        //assim ele não faz a conexao padrao e sim uma fake
-        let configuration = URLSessionConfiguration.default
-        configuration.protocolClasses = [UrlProtocolStub.self]
-        let session = Session(configuration: configuration)
-        let sut = AlamoFireAdapter(session: session)
-        sut.post(to: url, with: nil)
+        let sut = makeSut()
+        sut.post(to: makeUrl(), with: nil)
         let exp = expectation(description: "waiting")
         UrlProtocolStub.observeRequest { request in
             XCTAssertNil(request.httpBodyStream) // verifica se o body da requisicao nao esta vazio
@@ -64,6 +50,18 @@ class AlamofireAdapterTests: XCTestCase {
         wait(for: [exp], timeout: 1)
     }
 
+}
+
+extension AlamofireAdapterTests {
+    func makeSut() -> AlamoFireAdapter {
+        //definimos uma configuracao customizada para o Session do Alamofire.
+        //assim ele não faz a conexao padrao e sim uma fake
+        let configuration = URLSessionConfiguration.default
+        configuration.protocolClasses = [UrlProtocolStub.self]
+        let session = Session(configuration: configuration)
+        let sut = AlamoFireAdapter(session: session)
+        return sut
+    }
 }
 /*
     UrlProtocolStub é interceptador de requisicoes. É usado pelo Alamofire como configuração. Evita requisições reais na internet. Pode ser usado pelo URL Session também. Ou qualquer outra ferramenta que precise de um mock
