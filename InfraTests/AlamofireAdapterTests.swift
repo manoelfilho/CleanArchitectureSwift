@@ -43,13 +43,14 @@ class AlamofireAdapterTests: XCTestCase {
 
 extension AlamofireAdapterTests {
     
-    func makeSut() -> AlamoFireAdapter {
+    func makeSut(file: StaticString = #filePath, line: UInt = #line) -> AlamoFireAdapter {
         //definimos uma configuracao customizada para o Session do Alamofire.
         //assim ele não faz a conexao padrao e sim uma fake
         let configuration = URLSessionConfiguration.default
         configuration.protocolClasses = [UrlProtocolStub.self]
         let session = Session(configuration: configuration)
         let sut = AlamoFireAdapter(session: session)
+        checkMemoryLeak(for: sut, file: file, line: line)
         return sut
     }
     
