@@ -10,6 +10,10 @@ extension XCTestCase {
         }
     }
     
+    func makeValidData() -> Data{
+        return Data("{\"name\":\"Manoel\"}".utf8)
+    }
+    
     func makeInvalidData() -> Data{
         return Data("invalid_data".utf8)
     }
