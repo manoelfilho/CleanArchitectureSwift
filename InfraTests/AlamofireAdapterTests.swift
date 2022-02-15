@@ -25,34 +25,24 @@ class AlamofireAdapterTests: XCTestCase {
         Garatir que o Alamofire recebe a URL correta
      */
     func test_post_should_make_request_with_valid_url_and_method(){
-        
         let url = makeUrl()
-        let sut = makeSut()
-        sut.post(to: url, with: makeValidData())
-        let exp = expectation(description: "waiting")
-        UrlProtocolStub.observeRequest { request in
+        testRequestFor(url: url, data: makeValidData()){ request in
             XCTAssertEqual(url, request.url) // verifica se a URL é igual no AlamofireAdapter e na Session
             XCTAssertEqual("POST", request.httpMethod) // verifica se o tipo de requisicao é do tipo post
             XCTAssertNotNil(request.httpBodyStream) // verifica se o body da requisicao nao esta vazio
-            exp.fulfill()
         }
-        wait(for: [exp], timeout: 1)
     }
     
     func test_post_should_make_request_with_no_data(){
-        let sut = makeSut()
-        sut.post(to: makeUrl(), with: nil)
-        let exp = expectation(description: "waiting")
-        UrlProtocolStub.observeRequest { request in
+        testRequestFor(url: makeUrl(), data: makeInvalidData()){ request in
             XCTAssertNil(request.httpBodyStream) // verifica se o body da requisicao nao esta vazio
-            exp.fulfill()
         }
-        wait(for: [exp], timeout: 1)
     }
 
 }
 
 extension AlamofireAdapterTests {
+    
     func makeSut() -> AlamoFireAdapter {
         //definimos uma configuracao customizada para o Session do Alamofire.
         //assim ele não faz a conexao padrao e sim uma fake
@@ -62,6 +52,18 @@ extension AlamofireAdapterTests {
         let sut = AlamoFireAdapter(session: session)
         return sut
     }
+    
+    func testRequestFor(url: URL, data: Data?, action: @escaping (URLRequest) -> Void){
+        let sut = makeSut()
+        sut.post(to: url, with: data)
+        let exp = expectation(description: "waiting")
+        UrlProtocolStub.observeRequest { request in
+            action(request)
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 1)
+    }
+    
 }
 /*
     UrlProtocolStub é interceptador de requisicoes. É usado pelo Alamofire como configuração. Evita requisições reais na internet. Pode ser usado pelo URL Session também. Ou qualquer outra ferramenta que precise de um mock
