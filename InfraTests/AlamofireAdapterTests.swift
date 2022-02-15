@@ -14,7 +14,7 @@ class AlamoFireAdapter {
         self.session = session
     }
     func post(to url: URL){
-        session.request(url).resume()
+        session.request(url, method: .post).resume()
     }
 }
 
@@ -36,7 +36,8 @@ class AlamofireAdapterTests: XCTestCase {
         sut.post(to: url)
         let exp = expectation(description: "waiting")
         UrlProtocolStub.observeRequest { request in
-            XCTAssertEqual(url, request.url)
+            XCTAssertEqual(url, request.url) //verifica se a URL é igual no AlamofireAdapter e na Session
+            XCTAssertEqual("POST", request.httpMethod) // verifica se o tipo de requisicao é do tipo post
             exp.fulfill()
         }
         wait(for: [exp], timeout: 1)
