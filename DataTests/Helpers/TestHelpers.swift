@@ -21,4 +21,9 @@ extension XCTestCase {
     func makeUrl() -> URL {
         return URL(string: "http://any-url.com.br")!
     }
+    
+    func makeError() -> Error{
+        return NSError(domain: "any-error", code: 0)
+    }
+    
 }
