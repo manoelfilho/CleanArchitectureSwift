@@ -12,6 +12,7 @@ public final class RemoteAddAccount: AddAccount {
     }
     
     public func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, DomainError>) -> Void){
+        
         httpClient.post(to: url, with: addAccountModel.toData()) { [weak self] result in
             
             guard self != nil else { return } //se self for nulo retorna.
@@ -27,7 +28,8 @@ public final class RemoteAddAccount: AddAccount {
                     } else {
                         completion(.failure(.unexpected))
                     }
-                case .failure: completion(.failure(.unexpected))
+                case .failure(let error):
+                    completion(.failure(.unexpected))
             }
         }
     }
