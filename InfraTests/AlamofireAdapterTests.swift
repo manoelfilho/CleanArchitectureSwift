@@ -18,9 +18,15 @@ class AlamoFireAdapter {
     
     func post(to url: URL, with data: Data?, completion: @escaping (Result<Data, HttpError>) -> Void){
         session.request(url, method: .post, parameters: data?.toJson(), encoding: JSONEncoding.default).responseData { dataResponse in
+            
+            guard dataResponse.response?.statusCode != nil else {
+                return completion(.failure(.noConnectivity))
+            }
+            
             switch dataResponse.result {
             case .failure: completion(.failure(.noConnectivity))
-            case .success: break
+            case .success(let data):
+                completion(.success(data))
             }
         }
     }
@@ -46,11 +52,16 @@ class AlamofireAdapterTests: XCTestCase {
         }
     }
     
-    func test_post_should_complete_with_error_when_request_completes_with_error(){
-        expectResultFor(.failure(.noConnectivity), when: (data: nil, response: nil, error: makeError()))
+    func test_post_should_complete_with_error_on_all_invalid_cases(){
+        expectResultFor(.failure(.noConnectivity), when: (data: makeValidData(), response: makeHttpResponse(statusCode: 200), error: makeError()))
+        expectResultFor(.failure(.noConnectivity), when: (data: makeValidData(), response: nil, error: makeError()))
+        expectResultFor(.failure(.noConnectivity), when: (data: makeValidData(), response: nil, error: nil))
+        expectResultFor(.failure(.noConnectivity), when: (data: nil, response: makeHttpResponse(), error: nil))
+        expectResultFor(.failure(.noConnectivity), when: (data: nil, response: makeHttpResponse(), error: nil))
+        expectResultFor(.failure(.noConnectivity), when: (data: nil, response: nil, error: nil))
     }
 
-
+}
 /*
  
     Os teste que correspondem as respostas do Alamofire devem responder as seguintes situacoes
@@ -100,13 +111,13 @@ extension AlamofireAdapterTests {
         let exp = expectation(description: "waiting")
         sut.post(to: makeUrl(), with: makeValidData()){ receivedResult in
             switch (expectedResult, receivedResult) {
-            case (.failure(let expectedError), .failure(let receivedError)) : XCTAssertEqual(expectedError, receivedError, file: file, line: line)
-            case (.success(let expectedData), .success(let receiveddata)) : XCTAssertEqual(expectedData, receiveddata, file: file, line: line)
-            default: XCTFail("Expected \(expectedResult) got \(receivedResult) instead")
+                case (.failure(let expectedError), .failure(let receivedError)) : XCTAssertEqual(expectedError, receivedError, file: file, line: line)
+                case (.success(let expectedData), .success(let receiveddata)) : XCTAssertEqual(expectedData, receiveddata, file: file, line: line)
+                default: XCTFail("Expected \(expectedResult) got \(receivedResult) instead")
             }
             exp.fulfill()
         }
-            self.wait(for: [exp], timeout: 1)
+        wait(for: [exp], timeout: 1)
     }
     
 }

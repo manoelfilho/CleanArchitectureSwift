@@ -26,4 +26,7 @@ extension XCTestCase {
         return NSError(domain: "any-error", code: 0)
     }
     
+    func makeHttpResponse(statusCode: Int = 200) -> HTTPURLResponse? {
+        return HTTPURLResponse(url: makeUrl(), statusCode: statusCode, httpVersion: nil, headerFields: nil)!
+    }
 }
