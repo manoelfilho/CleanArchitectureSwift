@@ -18,6 +18,7 @@
 		BB260EB027B715FC00A089F2 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB260E8727B7126000A089F2 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BB6850F427B9F79800B2F8DF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BB6850F327B9F79800B2F8DF /* Alamofire */; };
 		BB6850F627BCAB5600B2F8DF /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6850F527BCAB5600B2F8DF /* AlamofireAdapter.swift */; };
+		BB6850FA27BCAD2900B2F8DF /* UrlProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6850F927BCAD2900B2F8DF /* UrlProtocolStub.swift */; };
 		BB6D20F227B838EA000AFD66 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D20F127B838EA000AFD66 /* TestHelpers.swift */; };
 		BB6D20FB27B88106000AFD66 /* HttpPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D20FA27B88106000AFD66 /* HttpPostClient.swift */; };
 		BB6D210027B88FC3000AFD66 /* HttpClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D20FF27B88FC3000AFD66 /* HttpClientSpy.swift */; };
@@ -97,6 +98,7 @@
 		BB260EA027B7159600A089F2 /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB260EA527B7159600A089F2 /* RemoteAddAccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccountTests.swift; sourceTree = "<group>"; };
 		BB6850F527BCAB5600B2F8DF /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
+		BB6850F927BCAD2900B2F8DF /* UrlProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlProtocolStub.swift; sourceTree = "<group>"; };
 		BB6D20F127B838EA000AFD66 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		BB6D20FA27B88106000AFD66 /* HttpPostClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpPostClient.swift; sourceTree = "<group>"; };
 		BB6D20FF27B88FC3000AFD66 /* HttpClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientSpy.swift; sourceTree = "<group>"; };
@@ -238,6 +240,15 @@
 			path = Http;
 			sourceTree = "<group>";
 		};
+		BB6850F827BCAD1E00B2F8DF /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				BB6D211227B94B30000AFD66 /* AlamofireAdapterTests.swift */,
+				BB6850F927BCAD2900B2F8DF /* UrlProtocolStub.swift */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
 		BB6D20E327B82F98000AFD66 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,7 +276,7 @@
 		BB6D211127B94B30000AFD66 /* InfraTests */ = {
 			isa = PBXGroup;
 			children = (
-				BB6D211227B94B30000AFD66 /* AlamofireAdapterTests.swift */,
+				BB6850F827BCAD1E00B2F8DF /* Http */,
 			);
 			path = InfraTests;
 			sourceTree = "<group>";
@@ -573,6 +584,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB6850FA27BCAD2900B2F8DF /* UrlProtocolStub.swift in Sources */,
 				BB6D211327B94B30000AFD66 /* AlamofireAdapterTests.swift in Sources */,
 				BB6D212027B94D61000AFD66 /* TestHelpers.swift in Sources */,
 			);
