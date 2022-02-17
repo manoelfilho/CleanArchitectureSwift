@@ -16,15 +16,22 @@ class SignupPresenter {
     }
     
     func signUp(viewModel: SignupViewModel){
+        if let message = validate(viewModel: viewModel) {
+            alertView.showMessage(viewModel: AlertViewModel(title: "Falha", message: message))
+        }
+    }
+    
+    func validate(viewModel: SignupViewModel) -> String? {
         if viewModel.username == nil || viewModel.username!.isEmpty {
-            alertView.showMessage(viewModel: AlertViewModel(title: "title", message: "O campo username é obrigatório"))
+            return "O campo username é obrigatório"
         }
         if viewModel.email == nil || viewModel.email!.isEmpty {
-            alertView.showMessage(viewModel: AlertViewModel(title: "title", message: "O campo email é obrigatório"))
+            return "O campo email é obrigatório"
         }
         if viewModel.password == nil || viewModel.password!.isEmpty {
-            alertView.showMessage(viewModel: AlertViewModel(title: "title", message: "O campo password é obrigatório"))
+            return "O campo password é obrigatório"
         }
+        return nil
     }
 }
 
@@ -59,7 +66,7 @@ class SignupPresenterTests: XCTestCase {
             role: 1
         )
         sut.signUp(viewModel: signUpViewModel)
-        XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "title", message: "O campo username é obrigatório"))
+        XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha", message: "O campo username é obrigatório"))
     }
     
     func test_signUp_should_show_message_error_if_email_is_not_provided(){
@@ -73,7 +80,7 @@ class SignupPresenterTests: XCTestCase {
             role: 1
         )
         sut.signUp(viewModel: signUpViewModel)
-        XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "title", message: "O campo email é obrigatório"))
+        XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha", message: "O campo email é obrigatório"))
     }
     
     
@@ -88,7 +95,7 @@ class SignupPresenterTests: XCTestCase {
             role: 1
         )
         sut.signUp(viewModel: signUpViewModel)
-        XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "title", message: "O campo password é obrigatório"))
+        XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha", message: "O campo password é obrigatório"))
     }
 
 }

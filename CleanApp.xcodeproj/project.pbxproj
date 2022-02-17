@@ -239,8 +239,8 @@
 				BB6D210727B94B30000AFD66 /* Infra */,
 				BB6D211127B94B30000AFD66 /* InfraTests */,
 				BB8F220627BD8C6F00F1BC29 /* UseCasesIntegrationTests */,
-				BBF4C15327BDD67600032363 /* PresentationLayer */,
-				BBF4C15D27BDD67600032363 /* PresentationLayerTests */,
+				BBF4C15327BDD67600032363 /* Presentation */,
+				BBF4C15D27BDD67600032363 /* PresentationTests */,
 				BB260E7727B7121A00A089F2 /* Products */,
 				BB260EAE27B715FC00A089F2 /* Frameworks */,
 			);
@@ -355,19 +355,19 @@
 			path = UseCasesIntegrationTests;
 			sourceTree = "<group>";
 		};
-		BBF4C15327BDD67600032363 /* PresentationLayer */ = {
+		BBF4C15327BDD67600032363 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = PresentationLayer;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
-		BBF4C15D27BDD67600032363 /* PresentationLayerTests */ = {
+		BBF4C15D27BDD67600032363 /* PresentationTests */ = {
 			isa = PBXGroup;
 			children = (
 				BBF4C15E27BDD67600032363 /* SignupPresenterTests.swift */,
 			);
-			path = PresentationLayerTests;
+			path = PresentationTests;
 			sourceTree = "<group>";
 		};
 		BBF9AF1127B737E100EDA0B1 /* UseCases */ = {
