@@ -19,6 +19,9 @@ class SignupPresenter {
         if viewModel.username == nil || viewModel.username!.isEmpty {
             alertView.showMessage(viewModel: AlertViewModel(title: "title", message: "O campo username é obrigatório"))
         }
+        if viewModel.email == nil || viewModel.email!.isEmpty {
+            alertView.showMessage(viewModel: AlertViewModel(title: "title", message: "O campo username é obrigatório"))
+        }
     }
 }
 
@@ -49,6 +52,20 @@ class SignupPresenterTests: XCTestCase {
             blocked: false,
             //username: "name",
             email: "email@email.com",
+            password: "password",
+            role: 1
+        )
+        sut.signUp(viewModel: signUpViewModel)
+        XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "title", message: "O campo username é obrigatório"))
+    }
+    
+    func test_signUp_should_show_message_error_if_email_is_not_provided(){
+        let (sut, alertViewSpy) = makeSut()
+        let signUpViewModel = SignupViewModel(
+            confirmed: true,
+            blocked: false,
+            username: "name",
+            //email: "email@email.com",
             password: "password",
             role: 1
         )
