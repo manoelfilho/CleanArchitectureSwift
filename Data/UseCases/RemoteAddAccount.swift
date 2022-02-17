@@ -28,7 +28,7 @@ public final class RemoteAddAccount: AddAccount {
                     } else {
                         completion(.failure(.unexpected))
                     }
-                case .failure(let error):
+            case .failure:
                     completion(.failure(.unexpected))
             }
         }
