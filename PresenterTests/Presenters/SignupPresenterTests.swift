@@ -13,14 +13,7 @@ class SignupPresenterTests: XCTestCase {
     func test_signUp_should_show_message_error_if_username_is_not_provided(){
         let alertViewSpy = AlertViewSpy()
         let sut = makeSut(alertViewSpy:alertViewSpy)
-        let signUpViewModel = SignupViewModel(
-            confirmed: true,
-            blocked: false,
-            //username: "name",
-            email: "email@email.com",
-            password: "password",
-            role: 1
-        )
+        let signUpViewModel = makeSignUpViewModel(username: nil)
         sut.signUp(viewModel: signUpViewModel)
         XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha", message: "O campo username é obrigatório"))
     }
@@ -28,14 +21,7 @@ class SignupPresenterTests: XCTestCase {
     func test_signUp_should_show_message_error_if_email_is_not_provided(){
         let alertViewSpy = AlertViewSpy()
         let sut = makeSut(alertViewSpy:alertViewSpy)
-        let signUpViewModel = SignupViewModel(
-            confirmed: true,
-            blocked: false,
-            username: "name",
-            //email: "email@email.com",
-            password: "password",
-            role: 1
-        )
+        let signUpViewModel = makeSignUpViewModel(email: nil)
         sut.signUp(viewModel: signUpViewModel)
         XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha", message: "O campo email é obrigatório"))
     }
@@ -44,14 +30,7 @@ class SignupPresenterTests: XCTestCase {
     func test_signUp_should_show_message_error_if_password_is_not_provided(){
         let alertViewSpy = AlertViewSpy()
         let sut = makeSut(alertViewSpy:alertViewSpy)
-        let signUpViewModel = SignupViewModel(
-            confirmed: true,
-            blocked: false,
-            username: "name",
-            email: "email@email.com",
-            //password: "password",
-            role: 1
-        )
+        let signUpViewModel = makeSignUpViewModel(password: nil)
         sut.signUp(viewModel: signUpViewModel)
         XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha", message: "O campo password é obrigatório"))
     }
@@ -60,14 +39,7 @@ class SignupPresenterTests: XCTestCase {
         let alertViewSpy = AlertViewSpy()
         let emailValidatorSpy = EmailValidatorSpy()
         let sut = makeSut(alertViewSpy:alertViewSpy, emailValidator: emailValidatorSpy)
-        let signUpViewModel = SignupViewModel(
-            confirmed: true,
-            blocked: false,
-            username: "name",
-            email: "email@email.com",
-            password: "password",
-            role: 1
-        )
+        let signUpViewModel = makeSignUpViewModel()
         sut.signUp(viewModel: signUpViewModel)
         XCTAssertEqual(emailValidatorSpy.email, signUpViewModel.email)
     }
@@ -76,14 +48,7 @@ class SignupPresenterTests: XCTestCase {
         let alertViewSpy = AlertViewSpy()
         let emailValidatorSpy = EmailValidatorSpy()
         let sut = makeSut(alertViewSpy:alertViewSpy, emailValidator: emailValidatorSpy)
-        let signUpViewModel = SignupViewModel(
-            confirmed: true,
-            blocked: false,
-            username: "name",
-            email: "email@email.com",
-            password: "password",
-            role: 1
-        )
+        let signUpViewModel = makeSignUpViewModel()
         emailValidatorSpy.isvalid = false
         sut.signUp(viewModel: signUpViewModel)
         XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha", message: "O email informado está inválido"))
@@ -115,6 +80,24 @@ extension SignupPresenterTests {
             return isvalid
         }
         
+    }
+    
+    func makeSignUpViewModel(
+        confirmed: Bool? = true,
+        blocked: Bool? = false,
+        username: String? = "any",
+        email: String? = "email@email.com",
+        password: String? = "secret",
+        role: Int? = 1) -> SignupViewModel {
+        
+        return SignupViewModel(
+            confirmed: confirmed,
+            blocked: blocked,
+            username: username,
+            email: email,
+            password: password,
+            role: role
+        )
     }
     
 }
