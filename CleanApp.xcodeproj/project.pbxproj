@@ -22,6 +22,7 @@
 		BB39042327BEFD6B00B973D3 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39042227BEFD6B00B973D3 /* AlertView.swift */; };
 		BB39042527BEFD9500B973D3 /* SignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39042427BEFD9500B973D3 /* SignupPresenter.swift */; };
 		BB39042727BEFDCD00B973D3 /* SignupPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39042627BEFDCD00B973D3 /* SignupPresenterTests.swift */; };
+		BB39042B27BF006100B973D3 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39042A27BF006100B973D3 /* EmailValidator.swift */; };
 		BB6850F427B9F79800B2F8DF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BB6850F327B9F79800B2F8DF /* Alamofire */; };
 		BB6850F627BCAB5600B2F8DF /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6850F527BCAB5600B2F8DF /* AlamofireAdapter.swift */; };
 		BB6850FA27BCAD2900B2F8DF /* UrlProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6850F927BCAD2900B2F8DF /* UrlProtocolStub.swift */; };
@@ -156,6 +157,7 @@
 		BB39042227BEFD6B00B973D3 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		BB39042427BEFD9500B973D3 /* SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenter.swift; sourceTree = "<group>"; };
 		BB39042627BEFDCD00B973D3 /* SignupPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenterTests.swift; sourceTree = "<group>"; };
+		BB39042A27BF006100B973D3 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		BB6850F527BCAB5600B2F8DF /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		BB6850F927BCAD2900B2F8DF /* UrlProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlProtocolStub.swift; sourceTree = "<group>"; };
 		BB6D20F127B838EA000AFD66 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 		BB39040527BEFCED00B973D3 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				BB39042927BF005300B973D3 /* Validators */,
 				BB39042127BEFD5000B973D3 /* Views */,
 				BB39042027BEFD4300B973D3 /* Presenters */,
 			);
@@ -362,6 +365,14 @@
 				BB39042627BEFDCD00B973D3 /* SignupPresenterTests.swift */,
 			);
 			path = Presenters;
+			sourceTree = "<group>";
+		};
+		BB39042927BF005300B973D3 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				BB39042A27BF006100B973D3 /* EmailValidator.swift */,
+			);
+			path = Validators;
 			sourceTree = "<group>";
 		};
 		BB6850F727BCACA000B2F8DF /* Http */ = {
@@ -818,6 +829,7 @@
 			files = (
 				BB39042527BEFD9500B973D3 /* SignupPresenter.swift in Sources */,
 				BB39042327BEFD6B00B973D3 /* AlertView.swift in Sources */,
+				BB39042B27BF006100B973D3 /* EmailValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

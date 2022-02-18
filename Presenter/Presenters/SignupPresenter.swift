@@ -8,6 +8,7 @@
 import Foundation
 
 public struct SignupViewModel {
+    
     public var confirmed: Bool?
     public var blocked: Bool?
     public var username: String?
@@ -23,20 +24,24 @@ public struct SignupViewModel {
         self.password = password
         self.role = role
     }
+    
 }
 
 public class SignupPresenter {
     
     private let alertView: AlertView
+    private let emailValidator: EmailValidator
     
-    public init(alertView: AlertView){
+    public init(alertView: AlertView, emailValidator: EmailValidator){
         self.alertView = alertView
+        self.emailValidator = emailValidator
     }
     
     public func signUp(viewModel: SignupViewModel){
         if let message = validate(viewModel: viewModel) {
             alertView.showMessage(viewModel: AlertViewModel(title: "Falha", message: message))
         }
+        
     }
     
     func validate(viewModel: SignupViewModel) -> String? {
@@ -49,6 +54,7 @@ public class SignupPresenter {
         if viewModel.password == nil || viewModel.password!.isEmpty {
             return "O campo password é obrigatório"
         }
+        _ = emailValidator.isValid(email: viewModel.email!)
         return nil
     }
 }
