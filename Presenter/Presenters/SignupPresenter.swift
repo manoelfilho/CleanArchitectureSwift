@@ -53,8 +53,9 @@ public class SignupPresenter {
         }
         if viewModel.password == nil || viewModel.password!.isEmpty {
             return "O campo password é obrigatório"
+        }else if !emailValidator.isValid(email: viewModel.email!) {
+            return "O email informado está inválido"
         }
-        _ = emailValidator.isValid(email: viewModel.email!)
         return nil
     }
 }
