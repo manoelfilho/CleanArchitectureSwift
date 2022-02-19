@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import Domain
 
-public struct SignUpViewModel {
+public struct SignUpViewModel: Model {
     
     public var confirmed: Bool?
     public var blocked: Bool?
@@ -16,7 +17,7 @@ public struct SignUpViewModel {
     public var password: String?
     public var role: Int?
     
-    public init(confirmed: Bool? = nil, blocked: Bool? = nil, username: String? = nil, email: String? = nil, password: String? = nil, role: Int? = nil){
+    public init(confirmed: Bool? = true, blocked: Bool? = false, username: String? = nil, email: String? = nil, password: String? = nil, role: Int? = 1){
         self.confirmed = confirmed
         self.blocked = blocked
         self.username = username
