@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct SignupViewModel {
+public struct SignUpViewModel {
     
     public var confirmed: Bool?
     public var blocked: Bool?

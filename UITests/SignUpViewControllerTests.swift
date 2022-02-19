@@ -23,14 +23,42 @@ class SignUpViewControllerTests: XCTestCase {
     func test_sut_implements_alertview(){
         XCTAssertNotNil(makeSut() as AlertView)
     }
+    
+    func test_save_button_calls_signup_on_tap(){
+        var callsCount = 0
+//        let signUpSpy: (SignUpViewModel) -> Void = { _ in
+//            callsCount += 1
+//        }
+        let sut = makeSut(signUpSpy: { _ in
+            callsCount += 1
+        })
+        sut.saveButton?.simulateTap()
+        XCTAssertEqual(callsCount, 1)
+    }
 
 }
 
 extension SignUpViewControllerTests {
-    func makeSut() -> SignUpViewController {
+    func makeSut(signUpSpy: ((SignUpViewModel) -> Void)? = nil) -> SignUpViewController {
         let sb = UIStoryboard(name: "SignUp", bundle: Bundle(for: SignUpViewController.self))
         let sut = sb.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
+        
+        sut.signUp = signUpSpy
+        
         sut.loadViewIfNeeded() //Forca a chamada do ViewDidLoad do UIVieController
         return sut
+    }
+}
+
+extension UIControl {
+    func simulate(event: UIControl.Event){
+        allTargets.forEach { target in
+            actions(forTarget: target, forControlEvent: event)?.forEach { action in
+                (target as NSObject).perform(Selector(action))
+            }
+        }
+    }
+    func simulateTap(){
+        simulate(event: .touchUpInside)
     }
 }

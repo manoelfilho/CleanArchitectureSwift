@@ -29,7 +29,7 @@
 		BB39044627C0911B00B973D3 /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39043727C08B6100B973D3 /* AccountModelFactory.swift */; };
 		BB39044727C09E7900B973D3 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D20F127B838EA000AFD66 /* TestHelpers.swift */; };
 		BB39044927C0A06900B973D3 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39044827C0A06900B973D3 /* LoadingView.swift */; };
-		BB39044C27C0ABFF00B973D3 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39044B27C0ABFF00B973D3 /* SignupViewModel.swift */; };
+		BB39044C27C0ABFF00B973D3 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39044B27C0ABFF00B973D3 /* SignUpViewModel.swift */; };
 		BB39044E27C0AC9000B973D3 /* SignupMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39044D27C0AC9000B973D3 /* SignupMapper.swift */; };
 		BB39045227C0AE9100B973D3 /* AlertViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39045127C0AE9100B973D3 /* AlertViewSpy.swift */; };
 		BB39045527C0AEEC00B973D3 /* EmailvalidatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39045427C0AEEC00B973D3 /* EmailvalidatorSpy.swift */; };
@@ -212,7 +212,7 @@
 		BB39042A27BF006100B973D3 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		BB39043727C08B6100B973D3 /* AccountModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModelFactory.swift; sourceTree = "<group>"; };
 		BB39044827C0A06900B973D3 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		BB39044B27C0ABFF00B973D3 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		BB39044B27C0ABFF00B973D3 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		BB39044D27C0AC9000B973D3 /* SignupMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupMapper.swift; sourceTree = "<group>"; };
 		BB39045127C0AE9100B973D3 /* AlertViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewSpy.swift; sourceTree = "<group>"; };
 		BB39045427C0AEEC00B973D3 /* EmailvalidatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailvalidatorSpy.swift; sourceTree = "<group>"; };
@@ -471,7 +471,7 @@
 			isa = PBXGroup;
 			children = (
 				BB39042427BEFD9500B973D3 /* SignupPresenter.swift */,
-				BB39044B27C0ABFF00B973D3 /* SignupViewModel.swift */,
+				BB39044B27C0ABFF00B973D3 /* SignUpViewModel.swift */,
 				BB39044D27C0AC9000B973D3 /* SignupMapper.swift */,
 			);
 			path = Signup;
@@ -1060,7 +1060,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB39042527BEFD9500B973D3 /* SignupPresenter.swift in Sources */,
-				BB39044C27C0ABFF00B973D3 /* SignupViewModel.swift in Sources */,
+				BB39044C27C0ABFF00B973D3 /* SignUpViewModel.swift in Sources */,
 				BB39044E27C0AC9000B973D3 /* SignupMapper.swift in Sources */,
 				BB39044927C0A06900B973D3 /* LoadingView.swift in Sources */,
 				BB39042327BEFD6B00B973D3 /* AlertView.swift in Sources */,

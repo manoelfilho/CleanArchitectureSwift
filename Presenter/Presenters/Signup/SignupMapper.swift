@@ -9,7 +9,7 @@ import Foundation
 import Domain
 
 public final class SignupMapper {
-    static func toAddAccountModel(viewModel: SignupViewModel) -> AddAccountModel {
+    static func toAddAccountModel(viewModel: SignUpViewModel) -> AddAccountModel {
         return AddAccountModel(confirmed: viewModel.confirmed!, blocked: viewModel.blocked!, username: viewModel.username!, email: viewModel.email!, password: viewModel.password!, role: viewModel.role!)
     }
 }

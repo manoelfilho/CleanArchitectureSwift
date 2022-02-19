@@ -26,9 +26,9 @@ func makeSignUpViewModel(
     username: String? = "any",
     email: String? = "email@email.com",
     password: String? = "secret",
-    role: Int? = 2) -> SignupViewModel {
+    role: Int? = 2) -> SignUpViewModel {
     
-    return SignupViewModel(
+    return SignUpViewModel(
         confirmed: confirmed,
         blocked: blocked,
         username: username,

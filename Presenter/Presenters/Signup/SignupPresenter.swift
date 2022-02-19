@@ -23,7 +23,7 @@ public class SignupPresenter {
         self.loadingView = loadingView
     }
     
-    public func signUp(viewModel: SignupViewModel){
+    public func signUp(viewModel: SignUpViewModel){
         
         if let message = validate(viewModel: viewModel) {
         
@@ -48,7 +48,7 @@ public class SignupPresenter {
         
     }
     
-    func validate(viewModel: SignupViewModel) -> String? {
+    func validate(viewModel: SignUpViewModel) -> String? {
         if viewModel.username == nil || viewModel.username!.isEmpty {
             return "O campo username é obrigatório"
         }
