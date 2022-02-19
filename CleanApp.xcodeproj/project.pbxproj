@@ -38,6 +38,8 @@
 		BB39046227C0B17800B973D3 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39046127C0B17800B973D3 /* TestFactories.swift */; };
 		BB566B1827C125B800B66934 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB566B1027C125B800B66934 /* UI.framework */; };
 		BB566B1D27C125B800B66934 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB566B1C27C125B800B66934 /* SignupViewController.swift */; };
+		BB566B2A27C1307F00B66934 /* Presenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB39040427BEFCED00B973D3 /* Presenter.framework */; };
+		BB566B2B27C1307F00B66934 /* Presenter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB39040427BEFCED00B973D3 /* Presenter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BB6850F427B9F79800B2F8DF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BB6850F327B9F79800B2F8DF /* Alamofire */; };
 		BB6850F627BCAB5600B2F8DF /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6850F527BCAB5600B2F8DF /* AlamofireAdapter.swift */; };
 		BB6850FA27BCAD2900B2F8DF /* UrlProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6850F927BCAD2900B2F8DF /* UrlProtocolStub.swift */; };
@@ -98,6 +100,13 @@
 			remoteGlobalIDString = BB566B0F27C125B800B66934;
 			remoteInfo = UI;
 		};
+		BB566B2C27C1307F00B66934 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB260E6D27B7121A00A089F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB39040327BEFCED00B973D3;
+			remoteInfo = Presenter;
+		};
 		BB6D210F27B94B30000AFD66 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BB260E6D27B7121A00A089F2 /* Project object */;
@@ -155,6 +164,17 @@
 			files = (
 				BB39044327C08FE300B973D3 /* Data.framework in Embed Frameworks */,
 				BB39043E27C08FE100B973D3 /* Domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB566B2E27C1307F00B66934 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BB566B2B27C1307F00B66934 /* Presenter.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +279,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB566B2A27C1307F00B66934 /* Presenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -753,10 +774,12 @@
 				BB566B0C27C125B800B66934 /* Sources */,
 				BB566B0D27C125B800B66934 /* Frameworks */,
 				BB566B0E27C125B800B66934 /* Resources */,
+				BB566B2E27C1307F00B66934 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BB566B2D27C1307F00B66934 /* PBXTargetDependency */,
 			);
 			name = UI;
 			productName = UI;
@@ -1126,6 +1149,11 @@
 			target = BB566B0F27C125B800B66934 /* UI */;
 			targetProxy = BB566B1927C125B800B66934 /* PBXContainerItemProxy */;
 		};
+		BB566B2D27C1307F00B66934 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB39040327BEFCED00B973D3 /* Presenter */;
+			targetProxy = BB566B2C27C1307F00B66934 /* PBXContainerItemProxy */;
+		};
 		BB6D211027B94B30000AFD66 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BB6D210527B94B30000AFD66 /* Infra */;
@@ -1301,6 +1329,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.Domain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1330,6 +1359,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.Domain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1359,6 +1389,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.Data;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1388,6 +1419,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.Data;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1404,6 +1436,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.DataTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1420,6 +1453,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.DataTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1449,6 +1483,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.Presenter;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1479,6 +1514,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.Presenter;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1501,6 +1537,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.PresenterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1524,6 +1561,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.PresenterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1552,6 +1590,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.UI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1580,6 +1619,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.UI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1595,6 +1635,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1610,6 +1651,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1640,6 +1682,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.Infra;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1671,6 +1714,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.Infra;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1687,6 +1731,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.InfraTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1703,6 +1748,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.InfraTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1718,6 +1764,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.UseCasesIntegrationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1733,6 +1780,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.UseCasesIntegrationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
