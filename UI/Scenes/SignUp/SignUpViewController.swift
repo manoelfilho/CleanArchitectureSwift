@@ -42,6 +42,7 @@ final class SignUpViewController: UIViewController {
 extension SignUpViewController: LoadingView {
     func display(viewModel: LoadingViewModel) {
         if viewModel.isLoading {
+            view.isUserInteractionEnabled = false //desabilita a interacão com a tela quando o loading está ativo
             loadingIndicator.startAnimating()
         } else {
             loadingIndicator.stopAnimating()
