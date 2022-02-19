@@ -7,6 +7,8 @@
 
 import XCTest
 import Presenter
+import Domain
+import Data
 
 class SignupPresenterTests: XCTestCase {
 
@@ -53,17 +55,31 @@ class SignupPresenterTests: XCTestCase {
         sut.signUp(viewModel: signUpViewModel)
         XCTAssertEqual(alertViewSpy.viewModel, makeRequiredAlertViewName(fieldText: "O email informado está inválido"))
     }
+    
+    func test_signup_shoul_call_addAccount_with_correct_data(){
+        let addAccountSpy = AddAccountSpy()
+        let sut = makeSut(addAccount: addAccountSpy)
+        sut.signUp(viewModel: makeSignUpViewModel())
+        XCTAssertEqual(addAccountSpy.addAccountModel, makeAddAccountModel())
+    }
 
 }
 
 extension SignupPresenterTests {
     
+    class AddAccountSpy: AddAccount {
+        var addAccountModel: AddAccountModel?
+        func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, DomainError>) -> Void) {
+            self.addAccountModel = addAccountModel
+        }
+    }
+    
     func makeRequiredAlertViewName(fieldText: String) -> AlertViewModel {
         return AlertViewModel(title: "Falha", message: fieldText)
     }
     
-    func makeSut( alertViewSpy: AlertViewSpy = AlertViewSpy(), emailValidator: EmailValidatorSpy = EmailValidatorSpy() ) -> SignupPresenter {
-        let sut = SignupPresenter(alertView: alertViewSpy, emailValidator: emailValidator)
+    func makeSut( alertViewSpy: AlertViewSpy = AlertViewSpy(), emailValidator: EmailValidatorSpy = EmailValidatorSpy(), addAccount: AddAccountSpy = AddAccountSpy() ) -> SignupPresenter {
+        let sut = SignupPresenter(alertView: alertViewSpy, emailValidator: emailValidator, addAccount: addAccount)
         return sut
     }
     
@@ -96,7 +112,7 @@ extension SignupPresenterTests {
         username: String? = "any",
         email: String? = "email@email.com",
         password: String? = "secret",
-        role: Int? = 1) -> SignupViewModel {
+        role: Int? = 2) -> SignupViewModel {
         
         return SignupViewModel(
             confirmed: confirmed,

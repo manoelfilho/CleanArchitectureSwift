@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Domain
 
 public struct SignupViewModel {
     
@@ -31,15 +32,20 @@ public class SignupPresenter {
     
     private let alertView: AlertView
     private let emailValidator: EmailValidator
+    private let addAccount: AddAccount
     
-    public init(alertView: AlertView, emailValidator: EmailValidator){
+    public init(alertView: AlertView, emailValidator: EmailValidator, addAccount: AddAccount){
         self.alertView = alertView
         self.emailValidator = emailValidator
+        self.addAccount = addAccount
     }
     
     public func signUp(viewModel: SignupViewModel){
         if let message = validate(viewModel: viewModel) {
             alertView.showMessage(viewModel: AlertViewModel(title: "Falha", message: message))
+        } else {
+            let addAccountModel = AddAccountModel(confirmed: viewModel.confirmed!, blocked: viewModel.blocked!, username: viewModel.username!, email: viewModel.email!, password: viewModel.password!, role: viewModel.role!)
+            addAccount.add(addAccountModel: addAccountModel) { _ in }
         }
         
     }
