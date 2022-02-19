@@ -11,6 +11,7 @@
 		BB06165F27B7E99E0088AFFE /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06165E27B7E99E0088AFFE /* HttpError.swift */; };
 		BB06166227B800830088AFFE /* ExtensionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06166127B800830088AFFE /* ExtensionHelper.swift */; };
 		BB223BF527C1792D0053299D /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB223BF427C1792D0053299D /* TestExtensions.swift */; };
+		BB223BF827C190B00053299D /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB223BF727C190B00053299D /* UIViewControllerExtensions.swift */; };
 		BB260E9127B7135300A089F2 /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB260E9027B7135300A089F2 /* AddAccount.swift */; };
 		BB260E9327B714F300A089F2 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB260E9227B714F300A089F2 /* AccountModel.swift */; };
 		BB260EA127B7159600A089F2 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB260E9927B7159600A089F2 /* Data.framework */; };
@@ -200,6 +201,7 @@
 		BB06165E27B7E99E0088AFFE /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		BB06166127B800830088AFFE /* ExtensionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelper.swift; sourceTree = "<group>"; };
 		BB223BF427C1792D0053299D /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
+		BB223BF727C190B00053299D /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		BB260E8727B7126000A089F2 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB260E9027B7135300A089F2 /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
 		BB260E9227B714F300A089F2 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
@@ -379,6 +381,14 @@
 			isa = PBXGroup;
 			children = (
 				BB223BF427C1792D0053299D /* TestExtensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BB223BF627C190930053299D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BB223BF727C190B00053299D /* UIViewControllerExtensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -564,6 +574,7 @@
 		BB566B1127C125B800B66934 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BB223BF627C190930053299D /* Helpers */,
 				BB223BF127C178E20053299D /* Scenes */,
 			);
 			path = UI;
@@ -1130,6 +1141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB223BF827C190B00053299D /* UIViewControllerExtensions.swift in Sources */,
 				BB566B3027C135C300B66934 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

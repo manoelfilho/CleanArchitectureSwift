@@ -29,17 +29,12 @@ final class SignUpViewController: UIViewController {
     private func configure(){
         saveButton.layer.cornerRadius = 5
         saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
-        
-        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideKeyboard)))
+        hideKeyboardOnTap()
     }
     
     @objc private func saveButtonTapped(){
         let viewModel = SignUpViewModel(username: self.usernameTextField.text, email: self.emailTextField.text, password: self.passwordTextField.text)
         signUp?(viewModel)
-    }
-    
-    @objc private func hideKeyboard(){
-        view.endEditing(true) //fecha o teclado
     }
     
 }
