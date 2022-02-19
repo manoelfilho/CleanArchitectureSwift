@@ -7,6 +7,7 @@
 
 import Foundation
 import Domain
+import XCTest
 
 public struct SignupViewModel {
     
@@ -45,7 +46,12 @@ public class SignupPresenter {
             alertView.showMessage(viewModel: AlertViewModel(title: "Falha", message: message))
         } else {
             let addAccountModel = AddAccountModel(confirmed: viewModel.confirmed!, blocked: viewModel.blocked!, username: viewModel.username!, email: viewModel.email!, password: viewModel.password!, role: viewModel.role!)
-            addAccount.add(addAccountModel: addAccountModel) { _ in }
+            addAccount.add(addAccountModel: addAccountModel) { result in
+                switch result {
+                    case .failure: self.alertView.showMessage(viewModel: AlertViewModel(title: "Erro", message: "Algo inesperado aconteceu. Tente em alguns instantes"))
+                    case .success: break
+                }
+            }
         }
         
     }
