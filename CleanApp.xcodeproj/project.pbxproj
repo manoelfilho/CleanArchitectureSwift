@@ -30,6 +30,7 @@
 		BB39044727C09E7900B973D3 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D20F127B838EA000AFD66 /* TestHelpers.swift */; };
 		BB39044927C0A06900B973D3 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39044827C0A06900B973D3 /* LoadingView.swift */; };
 		BB39044C27C0ABFF00B973D3 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39044B27C0ABFF00B973D3 /* SignupViewModel.swift */; };
+		BB39044E27C0AC9000B973D3 /* SignupMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39044D27C0AC9000B973D3 /* SignupMapper.swift */; };
 		BB6850F427B9F79800B2F8DF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BB6850F327B9F79800B2F8DF /* Alamofire */; };
 		BB6850F627BCAB5600B2F8DF /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6850F527BCAB5600B2F8DF /* AlamofireAdapter.swift */; };
 		BB6850FA27BCAD2900B2F8DF /* UrlProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6850F927BCAD2900B2F8DF /* UrlProtocolStub.swift */; };
@@ -176,6 +177,7 @@
 		BB39043727C08B6100B973D3 /* AccountModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModelFactory.swift; sourceTree = "<group>"; };
 		BB39044827C0A06900B973D3 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		BB39044B27C0ABFF00B973D3 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		BB39044D27C0AC9000B973D3 /* SignupMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupMapper.swift; sourceTree = "<group>"; };
 		BB6850F527BCAB5600B2F8DF /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		BB6850F927BCAD2900B2F8DF /* UrlProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlProtocolStub.swift; sourceTree = "<group>"; };
 		BB6D20F127B838EA000AFD66 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
@@ -400,6 +402,7 @@
 			children = (
 				BB39042427BEFD9500B973D3 /* SignupPresenter.swift */,
 				BB39044B27C0ABFF00B973D3 /* SignupViewModel.swift */,
+				BB39044D27C0AC9000B973D3 /* SignupMapper.swift */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -861,6 +864,7 @@
 			files = (
 				BB39042527BEFD9500B973D3 /* SignupPresenter.swift in Sources */,
 				BB39044C27C0ABFF00B973D3 /* SignupViewModel.swift in Sources */,
+				BB39044E27C0AC9000B973D3 /* SignupMapper.swift in Sources */,
 				BB39044927C0A06900B973D3 /* LoadingView.swift in Sources */,
 				BB39042327BEFD6B00B973D3 /* AlertView.swift in Sources */,
 				BB39042B27BF006100B973D3 /* EmailValidator.swift in Sources */,

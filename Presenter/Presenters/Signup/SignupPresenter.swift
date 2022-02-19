@@ -30,12 +30,10 @@ public class SignupPresenter {
             alertView.showMessage(viewModel: AlertViewModel(title: "Falha", message: message))
         
         } else {
-            
-            let addAccountModel = AddAccountModel(confirmed: viewModel.confirmed!, blocked: viewModel.blocked!, username: viewModel.username!, email: viewModel.email!, password: viewModel.password!, role: viewModel.role!)
-            
+                        
             loadingView.display(viewModel: LoadingViewModel(isLoading: true))
             
-            addAccount.add(addAccountModel: addAccountModel) { [weak self] result in
+            addAccount.add(addAccountModel: SignupMapper.toAddAccountModel(viewModel: viewModel)) { [weak self] result in
             
                 guard let self = self else { return }
                 switch result {
