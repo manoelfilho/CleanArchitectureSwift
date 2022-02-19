@@ -27,6 +27,7 @@
 		BB39044227C08FE300B973D3 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB260E9927B7159600A089F2 /* Data.framework */; };
 		BB39044327C08FE300B973D3 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB260E9927B7159600A089F2 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BB39044627C0911B00B973D3 /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39043727C08B6100B973D3 /* AccountModelFactory.swift */; };
+		BB39044727C09E7900B973D3 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D20F127B838EA000AFD66 /* TestHelpers.swift */; };
 		BB6850F427B9F79800B2F8DF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BB6850F327B9F79800B2F8DF /* Alamofire */; };
 		BB6850F627BCAB5600B2F8DF /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6850F527BCAB5600B2F8DF /* AlamofireAdapter.swift */; };
 		BB6850FA27BCAD2900B2F8DF /* UrlProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6850F927BCAD2900B2F8DF /* UrlProtocolStub.swift */; };
@@ -856,6 +857,7 @@
 			files = (
 				BB39044627C0911B00B973D3 /* AccountModelFactory.swift in Sources */,
 				BB39042727BEFDCD00B973D3 /* SignupPresenterTests.swift in Sources */,
+				BB39044727C09E7900B973D3 /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

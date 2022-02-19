@@ -46,7 +46,8 @@ public class SignupPresenter {
             alertView.showMessage(viewModel: AlertViewModel(title: "Falha", message: message))
         } else {
             let addAccountModel = AddAccountModel(confirmed: viewModel.confirmed!, blocked: viewModel.blocked!, username: viewModel.username!, email: viewModel.email!, password: viewModel.password!, role: viewModel.role!)
-            addAccount.add(addAccountModel: addAccountModel) { result in
+            addAccount.add(addAccountModel: addAccountModel) { [weak self] result in
+                guard let self = self else { return }
                 switch result {
                     case .failure: self.alertView.showMessage(viewModel: AlertViewModel(title: "Erro", message: "Algo inesperado aconteceu. Tente em alguns instantes"))
                     case .success: break
