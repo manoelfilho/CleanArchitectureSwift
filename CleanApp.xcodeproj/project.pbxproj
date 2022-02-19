@@ -37,9 +37,11 @@
 		BB39045A27C0AF5B00B973D3 /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39045927C0AF5B00B973D3 /* AddAccountSpy.swift */; };
 		BB39046227C0B17800B973D3 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39046127C0B17800B973D3 /* TestFactories.swift */; };
 		BB566B1827C125B800B66934 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB566B1027C125B800B66934 /* UI.framework */; };
-		BB566B1D27C125B800B66934 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB566B1C27C125B800B66934 /* SignupViewController.swift */; };
+		BB566B1D27C125B800B66934 /* SignUpViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB566B1C27C125B800B66934 /* SignUpViewControllerTests.swift */; };
 		BB566B2A27C1307F00B66934 /* Presenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB39040427BEFCED00B973D3 /* Presenter.framework */; };
 		BB566B2B27C1307F00B66934 /* Presenter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB39040427BEFCED00B973D3 /* Presenter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BB566B3027C135C300B66934 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB566B2F27C135C300B66934 /* SignUpViewController.swift */; };
+		BB566B3227C1364100B66934 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB566B3127C1364100B66934 /* SignUp.storyboard */; };
 		BB6850F427B9F79800B2F8DF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BB6850F327B9F79800B2F8DF /* Alamofire */; };
 		BB6850F627BCAB5600B2F8DF /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6850F527BCAB5600B2F8DF /* AlamofireAdapter.swift */; };
 		BB6850FA27BCAD2900B2F8DF /* UrlProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6850F927BCAD2900B2F8DF /* UrlProtocolStub.swift */; };
@@ -219,7 +221,9 @@
 		BB39046127C0B17800B973D3 /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
 		BB566B1027C125B800B66934 /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB566B1727C125B800B66934 /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB566B1C27C125B800B66934 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		BB566B1C27C125B800B66934 /* SignUpViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerTests.swift; sourceTree = "<group>"; };
+		BB566B2F27C135C300B66934 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		BB566B3127C1364100B66934 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		BB6850F527BCAB5600B2F8DF /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		BB6850F927BCAD2900B2F8DF /* UrlProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlProtocolStub.swift; sourceTree = "<group>"; };
 		BB6D20F127B838EA000AFD66 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
@@ -517,6 +521,8 @@
 		BB566B1127C125B800B66934 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BB566B2F27C135C300B66934 /* SignUpViewController.swift */,
+				BB566B3127C1364100B66934 /* SignUp.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -524,7 +530,7 @@
 		BB566B1B27C125B800B66934 /* UITests */ = {
 			isa = PBXGroup;
 			children = (
-				BB566B1C27C125B800B66934 /* SignupViewController.swift */,
+				BB566B1C27C125B800B66934 /* SignUpViewControllerTests.swift */,
 			);
 			path = UITests;
 			sourceTree = "<group>";
@@ -894,6 +900,7 @@
 					};
 					BB566B0F27C125B800B66934 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 					};
 					BB566B1627C125B800B66934 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -980,6 +987,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB566B3227C1364100B66934 /* SignUp.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1079,6 +1087,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB566B3027C135C300B66934 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1086,7 +1095,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB566B1D27C125B800B66934 /* SignupViewController.swift in Sources */,
+				BB566B1D27C125B800B66934 /* SignUpViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1570,6 +1579,7 @@
 		BB566B1F27C125B800B66934 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1592,6 +1602,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1599,6 +1610,7 @@
 		BB566B2027C125B800B66934 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1628,6 +1640,7 @@
 		BB566B2127C125B800B66934 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 56EQ48SVZJ;
@@ -1644,6 +1657,7 @@
 		BB566B2227C125B800B66934 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 56EQ48SVZJ;

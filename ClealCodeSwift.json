@@ -1,0 +1,79 @@
+{
+  "uuid": "54c495d1-0a08-4b3e-a434-47e31c85fcd0",
+  "lastMigration": 19,
+  "name": "ClealCodeSwift",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "0.0.0.0",
+  "routes": [
+    {
+      "uuid": "133f83fe-27f5-4bed-9814-84d679f3198f",
+      "documentation": "Adicionar um usuário",
+      "method": "post",
+      "endpoint": "users",
+      "responses": [
+        {
+          "uuid": "d6ff8189-285c-412c-8d38-6b834e9f3ed6",
+          "body": "{\n    \"id\": 1,\n    \"username\": \"manoel\",\n    \"email\": \"email@email.com\",\n    \"provider\":\"local\",\n    \"confirmed\": true,\n    \"blocked\": false,\n    \"createdAt\": \"data\",\n    \"updatedAt\": \"data\"\n}",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ]
+}
