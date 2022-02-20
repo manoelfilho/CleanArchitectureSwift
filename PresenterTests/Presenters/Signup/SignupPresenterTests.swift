@@ -142,9 +142,9 @@ extension SignupPresenterTests {
         emailValidator: EmailValidatorSpy = EmailValidatorSpy(),
         addAccount: AddAccountSpy = AddAccountSpy(),
         loadingViewSpy: LoadingViewSpy = LoadingViewSpy(),
-        file: StaticString = #filePath, line: UInt = #line) -> SignupPresenter {
+        file: StaticString = #filePath, line: UInt = #line) -> SignUpPresenter {
             
-            let sut = SignupPresenter(alertView: alertViewSpy, emailValidator: emailValidator, addAccount: addAccount, loadingView: loadingViewSpy)
+            let sut = SignUpPresenter(alertView: alertViewSpy, emailValidator: emailValidator, addAccount: addAccount, loadingView: loadingViewSpy)
         checkMemoryLeak(for: sut, file: file, line: line)
         return sut
     }

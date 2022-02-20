@@ -14,10 +14,10 @@
       "endpoint": "users",
       "responses": [
         {
-          "uuid": "d6ff8189-285c-412c-8d38-6b834e9f3ed6",
-          "body": "{\n    \"id\": 1,\n    \"username\": \"manoel\",\n    \"email\": \"email@email.com\",\n    \"provider\":\"local\",\n    \"confirmed\": true,\n    \"blocked\": false,\n    \"createdAt\": \"data\",\n    \"updatedAt\": \"data\"\n}",
+          "uuid": "0ca8fb05-c42c-4bfe-8d7f-842f33024f09",
+          "body": "{\n   \"confirmed\":true,\n   \"blocked\":false,\n   \"username\":\"manoelfilho\",\n   \"email\":\"email2email.com\",\n   \"password\":\"manoel\",\n   \"created_at\":\"data\",\n   \"deleted_at\":\"data\",\n   \"role\":2\n}",
           "latency": 0,
-          "statusCode": 201,
+          "statusCode": 200,
           "label": "",
           "headers": [],
           "filePath": "",
