@@ -10,6 +10,6 @@ import Domain
 
 public final class SignUpMapper {
     static func toAddAccountModel(viewModel: SignUpViewModel) -> AddAccountModel {
-        return AddAccountModel(confirmed: viewModel.confirmed!, blocked: viewModel.blocked!, username: viewModel.username!, email: viewModel.email!, password: viewModel.password!, role: viewModel.role!)
+        return AddAccountModel(confirmed: viewModel.confirmed!, blocked: viewModel.blocked!, username: viewModel.username!, email: viewModel.email!, password: viewModel.password!, role: viewModel.role!, provider: viewModel.provider!)
     }
 }

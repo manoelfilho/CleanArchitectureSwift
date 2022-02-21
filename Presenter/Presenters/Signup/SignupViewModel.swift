@@ -16,14 +16,16 @@ public struct SignUpViewModel: Model {
     public var email: String?
     public var password: String?
     public var role: Int?
+    public var provider: String?
     
-    public init(confirmed: Bool? = true, blocked: Bool? = false, username: String? = nil, email: String? = nil, password: String? = nil, role: Int? = 1){
+    public init(confirmed: Bool? = true, blocked: Bool? = false, username: String? = nil, email: String? = nil, password: String? = nil, role: Int? = 1, provider: String? = "local"){
         self.confirmed = confirmed
         self.blocked = blocked
         self.username = username
         self.email = email
         self.password = password
         self.role = role
+        self.provider = provider
     }
     
 }

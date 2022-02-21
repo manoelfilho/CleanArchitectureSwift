@@ -9,7 +9,7 @@ class AddAccounIntegrationTests: XCTestCase {
         let url = URL(string: "http://192.168.1.5:3001/users")!
         let alamofireAdapter = AlamofireAdapter()
         let sut = RemoteAddAccount(url: url, httpClient: alamofireAdapter)
-        let addAccountModel = AddAccountModel(confirmed: true, blocked: false, username: "manoel", email: "email@email.com", password: "senha", role: 1)
+        let addAccountModel = AddAccountModel(confirmed: true, blocked: false, username: "manoel", email: "email@email.com", password: "senha", role: 1, provider: "local")
         let exp = expectation(description: "waiting")
         sut.add(addAccountModel: addAccountModel) { result in
             switch result {

@@ -6,7 +6,9 @@ public extension Data {
         do {
             return try JSONDecoder().decode(T.self, from: self)
         } catch {
-            print(error)
+            print(">>>")
+            print(error.localizedDescription)
+            print(">>>")
         }
         return nil
     }
