@@ -58,6 +58,8 @@
 		BB6D212027B94D61000AFD66 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D20F127B838EA000AFD66 /* TestHelpers.swift */; };
 		BB8F220827BD8C6F00F1BC29 /* AddAccounIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8F220727BD8C6F00F1BC29 /* AddAccounIntegrationTests.swift */; };
 		BB8F220927BD8C6F00F1BC29 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB260E9927B7159600A089F2 /* Data.framework */; };
+		BB93172A27C5865A005E044D /* useCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB93172927C5865A005E044D /* useCaseFactory.swift */; };
+		BB93172D27C5870D005E044D /* SignUpComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB93172C27C5870D005E044D /* SignUpComposer.swift */; };
 		BBEEDF2727C2920800CF9774 /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEEDF1F27C2920800CF9774 /* Validation.framework */; };
 		BBEEDF2C27C2920800CF9774 /* EmailValidatorAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEEDF2B27C2920800CF9774 /* EmailValidatorAdapterTests.swift */; };
 		BBEEDF3427C2930600CF9774 /* Presenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB39040427BEFCED00B973D3 /* Presenter.framework */; platformFilter = ios; };
@@ -82,7 +84,7 @@
 		BBEEDF8027C2CC3A00CF9774 /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB566B1027C125B800B66934 /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BBEEDF8327C2CC3A00CF9774 /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEEDF1F27C2920800CF9774 /* Validation.framework */; platformFilter = ios; };
 		BBEEDF8427C2CC3B00CF9774 /* Validation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BBEEDF1F27C2920800CF9774 /* Validation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BBEEDF8A27C2CCEC00CF9774 /* SignUpFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEEDF8927C2CCEC00CF9774 /* SignUpFactory.swift */; };
+		BBEEDF8A27C2CCEC00CF9774 /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEEDF8927C2CCEC00CF9774 /* ControllerFactory.swift */; };
 		BBEEDF8D27C2CFC000CF9774 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEEDF8C27C2CFC000CF9774 /* Constants.swift */; };
 		BBF9AF0C27B7337900EDA0B1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF9AF0B27B7337900EDA0B1 /* Model.swift */; };
 		BBF9AF0E27B7342600EDA0B1 /* RemoteAddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF9AF0D27B7342600EDA0B1 /* RemoteAddAccount.swift */; };
@@ -363,6 +365,8 @@
 		BB6D211227B94B30000AFD66 /* AlamofireAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterTests.swift; sourceTree = "<group>"; };
 		BB8F220527BD8C6F00F1BC29 /* UseCasesIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UseCasesIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8F220727BD8C6F00F1BC29 /* AddAccounIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccounIntegrationTests.swift; sourceTree = "<group>"; };
+		BB93172927C5865A005E044D /* useCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = useCaseFactory.swift; sourceTree = "<group>"; };
+		BB93172C27C5870D005E044D /* SignUpComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposer.swift; sourceTree = "<group>"; };
 		BBEEDF1F27C2920800CF9774 /* Validation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Validation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBEEDF2627C2920800CF9774 /* ValidationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValidationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBEEDF2B27C2920800CF9774 /* EmailValidatorAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorAdapterTests.swift; sourceTree = "<group>"; };
@@ -378,7 +382,7 @@
 		BBEEDF5E27C2CA7700CF9774 /* MainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBEEDF6227C2CA7700CF9774 /* MainUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUITests.swift; sourceTree = "<group>"; };
 		BBEEDF6427C2CA7700CF9774 /* MainUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		BBEEDF8927C2CCEC00CF9774 /* SignUpFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFactory.swift; sourceTree = "<group>"; };
+		BBEEDF8927C2CCEC00CF9774 /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
 		BBEEDF8C27C2CFC000CF9774 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BBF9AF0B27B7337900EDA0B1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		BBF9AF0D27B7342600EDA0B1 /* RemoteAddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccount.swift; sourceTree = "<group>"; };
@@ -843,6 +847,14 @@
 			path = UseCasesIntegrationTests;
 			sourceTree = "<group>";
 		};
+		BB93172B27C586F7005E044D /* Composers */ = {
+			isa = PBXGroup;
+			children = (
+				BB93172C27C5870D005E044D /* SignUpComposer.swift */,
+			);
+			path = Composers;
+			sourceTree = "<group>";
+		};
 		BBEEDF2027C2920800CF9774 /* Validation */ = {
 			isa = PBXGroup;
 			children = (
@@ -862,6 +874,7 @@
 		BBEEDF4027C2CA7400CF9774 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				BB93172B27C586F7005E044D /* Composers */,
 				BBEEDF8B27C2CF8100CF9774 /* Keys */,
 				BBEEDF8827C2CCCE00CF9774 /* Factories */,
 				BBEEDF4127C2CA7400CF9774 /* AppDelegate.swift */,
@@ -893,7 +906,8 @@
 		BBEEDF8827C2CCCE00CF9774 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				BBEEDF8927C2CCEC00CF9774 /* SignUpFactory.swift */,
+				BBEEDF8927C2CCEC00CF9774 /* ControllerFactory.swift */,
+				BB93172927C5865A005E044D /* useCaseFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -1627,9 +1641,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBEEDF4227C2CA7400CF9774 /* AppDelegate.swift in Sources */,
-				BBEEDF8A27C2CCEC00CF9774 /* SignUpFactory.swift in Sources */,
+				BBEEDF8A27C2CCEC00CF9774 /* ControllerFactory.swift in Sources */,
 				BBEEDF4427C2CA7400CF9774 /* SceneDelegate.swift in Sources */,
+				BB93172A27C5865A005E044D /* useCaseFactory.swift in Sources */,
 				BBEEDF8D27C2CFC000CF9774 /* Constants.swift in Sources */,
+				BB93172D27C5870D005E044D /* SignUpComposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2500,9 +2516,10 @@
 				INFOPLIST_FILE = Main/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2530,9 +2547,10 @@
 				INFOPLIST_FILE = Main/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
