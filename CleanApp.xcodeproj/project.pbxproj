@@ -73,7 +73,7 @@
 		BBEEDF4427C2CA7400CF9774 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEEDF4327C2CA7400CF9774 /* SceneDelegate.swift */; };
 		BBEEDF4B27C2CA7600CF9774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBEEDF4A27C2CA7600CF9774 /* Assets.xcassets */; };
 		BBEEDF4E27C2CA7600CF9774 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBEEDF4C27C2CA7600CF9774 /* LaunchScreen.storyboard */; };
-		BBEEDF5927C2CA7700CF9774 /* SignUpIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEEDF5827C2CA7700CF9774 /* SignUpIntegrationTests.swift */; };
+		BBEEDF5927C2CA7700CF9774 /* SignUpComposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEEDF5827C2CA7700CF9774 /* SignUpComposerTests.swift */; };
 		BBEEDF6F27C2CC3A00CF9774 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB260E9927B7159600A089F2 /* Data.framework */; platformFilter = ios; };
 		BBEEDF7027C2CC3A00CF9774 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB260E9927B7159600A089F2 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BBEEDF7327C2CC3A00CF9774 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB260E8727B7126000A089F2 /* Domain.framework */; platformFilter = ios; };
@@ -376,7 +376,7 @@
 		BBEEDF4D27C2CA7600CF9774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBEEDF4F27C2CA7600CF9774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBEEDF5427C2CA7600CF9774 /* MainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BBEEDF5827C2CA7700CF9774 /* SignUpIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpIntegrationTests.swift; sourceTree = "<group>"; };
+		BBEEDF5827C2CA7700CF9774 /* SignUpComposerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposerTests.swift; sourceTree = "<group>"; };
 		BBEEDF8C27C2CFC000CF9774 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BBF9AF0B27B7337900EDA0B1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		BBF9AF0D27B7342600EDA0B1 /* RemoteAddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccount.swift; sourceTree = "<group>"; };
@@ -858,6 +858,14 @@
 			path = Env;
 			sourceTree = "<group>";
 		};
+		BBC8AE1A27C7E74E00676A75 /* Composers */ = {
+			isa = PBXGroup;
+			children = (
+				BBEEDF5827C2CA7700CF9774 /* SignUpComposerTests.swift */,
+			);
+			path = Composers;
+			sourceTree = "<group>";
+		};
 		BBEEDF2027C2920800CF9774 /* Validation */ = {
 			isa = PBXGroup;
 			children = (
@@ -894,7 +902,7 @@
 		BBEEDF5727C2CA7600CF9774 /* MainTests */ = {
 			isa = PBXGroup;
 			children = (
-				BBEEDF5827C2CA7700CF9774 /* SignUpIntegrationTests.swift */,
+				BBC8AE1A27C7E74E00676A75 /* Composers */,
 			);
 			path = MainTests;
 			sourceTree = "<group>";
@@ -1620,7 +1628,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB93172E27C59CC8005E044D /* AddAccountSpy.swift in Sources */,
-				BBEEDF5927C2CA7700CF9774 /* SignUpIntegrationTests.swift in Sources */,
+				BBEEDF5927C2CA7700CF9774 /* SignUpComposerTests.swift in Sources */,
 				BB93172F27C59D52005E044D /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
