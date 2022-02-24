@@ -11,7 +11,7 @@
       "uuid": "133f83fe-27f5-4bed-9814-84d679f3198f",
       "documentation": "Adicionar um usuário",
       "method": "post",
-      "endpoint": "users",
+      "endpoint": "signup",
       "responses": [
         {
           "uuid": "0ca8fb05-c42c-4bfe-8d7f-842f33024f09",
