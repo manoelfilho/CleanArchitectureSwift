@@ -58,7 +58,7 @@
 		BB6D212027B94D61000AFD66 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D20F127B838EA000AFD66 /* TestHelpers.swift */; };
 		BB8F220827BD8C6F00F1BC29 /* AddAccounIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8F220727BD8C6F00F1BC29 /* AddAccounIntegrationTests.swift */; };
 		BB8F220927BD8C6F00F1BC29 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB260E9927B7159600A089F2 /* Data.framework */; };
-		BB93172A27C5865A005E044D /* useCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB93172927C5865A005E044D /* useCaseFactory.swift */; };
+		BB93172A27C5865A005E044D /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB93172927C5865A005E044D /* UseCaseFactory.swift */; };
 		BB93172D27C5870D005E044D /* SignUpComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB93172C27C5870D005E044D /* SignUpComposer.swift */; };
 		BB93172E27C59CC8005E044D /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39045927C0AF5B00B973D3 /* AddAccountSpy.swift */; };
 		BB93172F27C59D52005E044D /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D20F127B838EA000AFD66 /* TestHelpers.swift */; };
@@ -85,7 +85,6 @@
 		BBEEDF8027C2CC3A00CF9774 /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB566B1027C125B800B66934 /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BBEEDF8327C2CC3A00CF9774 /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEEDF1F27C2920800CF9774 /* Validation.framework */; platformFilter = ios; };
 		BBEEDF8427C2CC3B00CF9774 /* Validation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BBEEDF1F27C2920800CF9774 /* Validation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BBEEDF8A27C2CCEC00CF9774 /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEEDF8927C2CCEC00CF9774 /* ControllerFactory.swift */; };
 		BBEEDF8D27C2CFC000CF9774 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEEDF8C27C2CFC000CF9774 /* Constants.swift */; };
 		BBF9AF0C27B7337900EDA0B1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF9AF0B27B7337900EDA0B1 /* Model.swift */; };
 		BBF9AF0E27B7342600EDA0B1 /* RemoteAddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF9AF0D27B7342600EDA0B1 /* RemoteAddAccount.swift */; };
@@ -359,7 +358,7 @@
 		BB6D211227B94B30000AFD66 /* AlamofireAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterTests.swift; sourceTree = "<group>"; };
 		BB8F220527BD8C6F00F1BC29 /* UseCasesIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UseCasesIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8F220727BD8C6F00F1BC29 /* AddAccounIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccounIntegrationTests.swift; sourceTree = "<group>"; };
-		BB93172927C5865A005E044D /* useCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = useCaseFactory.swift; sourceTree = "<group>"; };
+		BB93172927C5865A005E044D /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
 		BB93172C27C5870D005E044D /* SignUpComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposer.swift; sourceTree = "<group>"; };
 		BBC8AE1327C7162000676A75 /* WeakVarProxies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakVarProxies.swift; sourceTree = "<group>"; };
 		BBEEDF1F27C2920800CF9774 /* Validation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Validation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -374,7 +373,6 @@
 		BBEEDF4F27C2CA7600CF9774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBEEDF5427C2CA7600CF9774 /* MainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBEEDF5827C2CA7700CF9774 /* SignUpIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpIntegrationTests.swift; sourceTree = "<group>"; };
-		BBEEDF8927C2CCEC00CF9774 /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
 		BBEEDF8C27C2CFC000CF9774 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BBF9AF0B27B7337900EDA0B1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		BBF9AF0D27B7342600EDA0B1 /* RemoteAddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccount.swift; sourceTree = "<group>"; };
@@ -865,8 +863,8 @@
 		BBEEDF4027C2CA7400CF9774 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				BBC8AE1227C7160A00676A75 /* Proxies */,
 				BB93172B27C586F7005E044D /* Composers */,
+				BBC8AE1227C7160A00676A75 /* Proxies */,
 				BBEEDF8B27C2CF8100CF9774 /* Keys */,
 				BBEEDF8827C2CCCE00CF9774 /* Factories */,
 				BBEEDF4127C2CA7400CF9774 /* AppDelegate.swift */,
@@ -889,8 +887,7 @@
 		BBEEDF8827C2CCCE00CF9774 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				BBEEDF8927C2CCEC00CF9774 /* ControllerFactory.swift */,
-				BB93172927C5865A005E044D /* useCaseFactory.swift */,
+				BB93172927C5865A005E044D /* UseCaseFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -1594,9 +1591,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBEEDF4227C2CA7400CF9774 /* AppDelegate.swift in Sources */,
-				BBEEDF8A27C2CCEC00CF9774 /* ControllerFactory.swift in Sources */,
 				BBEEDF4427C2CA7400CF9774 /* SceneDelegate.swift in Sources */,
-				BB93172A27C5865A005E044D /* useCaseFactory.swift in Sources */,
+				BB93172A27C5865A005E044D /* UseCaseFactory.swift in Sources */,
 				BBEEDF8D27C2CFC000CF9774 /* Constants.swift in Sources */,
 				BB93172D27C5870D005E044D /* SignUpComposer.swift in Sources */,
 				BBC8AE1427C7162000676A75 /* WeakVarProxies.swift in Sources */,
