@@ -56,6 +56,7 @@
 		BB6D211B27B94D19000AFD66 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB260E9927B7159600A089F2 /* Data.framework */; };
 		BB6D211C27B94D19000AFD66 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB260E9927B7159600A089F2 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BB6D212027B94D61000AFD66 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D20F127B838EA000AFD66 /* TestHelpers.swift */; };
+		BB8DD68E27C84FE100669702 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39046127C0B17800B973D3 /* TestFactories.swift */; };
 		BB8F220827BD8C6F00F1BC29 /* AddAccounIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8F220727BD8C6F00F1BC29 /* AddAccounIntegrationTests.swift */; };
 		BB8F220927BD8C6F00F1BC29 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB260E9927B7159600A089F2 /* Data.framework */; };
 		BB93172A27C5865A005E044D /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB93172927C5865A005E044D /* UseCaseFactory.swift */; };
@@ -1629,6 +1630,7 @@
 			files = (
 				BB93172E27C59CC8005E044D /* AddAccountSpy.swift in Sources */,
 				BBEEDF5927C2CA7700CF9774 /* SignUpComposerTests.swift in Sources */,
+				BB8DD68E27C84FE100669702 /* TestFactories.swift in Sources */,
 				BB93172F27C59D52005E044D /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
