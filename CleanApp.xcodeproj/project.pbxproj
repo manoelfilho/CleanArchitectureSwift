@@ -57,6 +57,7 @@
 		BB6D211C27B94D19000AFD66 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB260E9927B7159600A089F2 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BB6D212027B94D61000AFD66 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D20F127B838EA000AFD66 /* TestHelpers.swift */; };
 		BB8DD68E27C84FE100669702 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39046127C0B17800B973D3 /* TestFactories.swift */; };
+		BB8DD69127C877D800669702 /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8DD69027C877D800669702 /* MainQueueDispatchDecorator.swift */; };
 		BB8F220827BD8C6F00F1BC29 /* AddAccounIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8F220727BD8C6F00F1BC29 /* AddAccounIntegrationTests.swift */; };
 		BB8F220927BD8C6F00F1BC29 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB260E9927B7159600A089F2 /* Data.framework */; };
 		BB93172A27C5865A005E044D /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB93172927C5865A005E044D /* UseCaseFactory.swift */; };
@@ -358,6 +359,7 @@
 		BB6D210627B94B30000AFD66 /* Infra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Infra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6D210D27B94B30000AFD66 /* InfraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6D211227B94B30000AFD66 /* AlamofireAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterTests.swift; sourceTree = "<group>"; };
+		BB8DD69027C877D800669702 /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
 		BB8F220527BD8C6F00F1BC29 /* UseCasesIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UseCasesIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8F220727BD8C6F00F1BC29 /* AddAccounIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccounIntegrationTests.swift; sourceTree = "<group>"; };
 		BB93172927C5865A005E044D /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
@@ -825,6 +827,14 @@
 			path = InfraTests;
 			sourceTree = "<group>";
 		};
+		BB8DD68F27C877C200669702 /* Decorators */ = {
+			isa = PBXGroup;
+			children = (
+				BB8DD69027C877D800669702 /* MainQueueDispatchDecorator.swift */,
+			);
+			path = Decorators;
+			sourceTree = "<group>";
+		};
 		BB8F220627BD8C6F00F1BC29 /* UseCasesIntegrationTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -893,6 +903,7 @@
 				BBEEDF8827C2CCCE00CF9774 /* Factories */,
 				BBEEDF4127C2CA7400CF9774 /* AppDelegate.swift */,
 				BBEEDF4327C2CA7400CF9774 /* SceneDelegate.swift */,
+				BB8DD68F27C877C200669702 /* Decorators */,
 				BBEEDF4A27C2CA7600CF9774 /* Assets.xcassets */,
 				BBEEDF4C27C2CA7600CF9774 /* LaunchScreen.storyboard */,
 				BBEEDF4F27C2CA7600CF9774 /* Info.plist */,
@@ -1614,6 +1625,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB8DD69127C877D800669702 /* MainQueueDispatchDecorator.swift in Sources */,
 				BBEEDF4227C2CA7400CF9774 /* AppDelegate.swift in Sources */,
 				BBEEDF4427C2CA7400CF9774 /* SceneDelegate.swift in Sources */,
 				BBC8AE1927C7E23100676A75 /* Enviroment.swift in Sources */,
