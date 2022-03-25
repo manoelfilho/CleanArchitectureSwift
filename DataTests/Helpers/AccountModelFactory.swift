@@ -15,5 +15,5 @@ func makeAddAccountModel() -> AddAccountModel {
 
 //simula um AccountModel
 func makeAccountModel() -> AccountModel {
-    return AccountModel(id: 1, username: "any", email: "email@email.com", provider: "local", confirmed: true, blocked: false, createdAt: "data", updatedAt: "data")
+    return AccountModel(accessToken: "any_token")
 }
