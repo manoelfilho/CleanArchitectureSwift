@@ -10,6 +10,22 @@
 		BB06165D27B7E77A0088AFFE /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06165C27B7E77A0088AFFE /* DomainError.swift */; };
 		BB06165F27B7E99E0088AFFE /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06165E27B7E99E0088AFFE /* HttpError.swift */; };
 		BB06166227B800830088AFFE /* ExtensionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06166127B800830088AFFE /* ExtensionHelper.swift */; };
+		BB20F85627EBFD13009BD229 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB20F85527EBFD13009BD229 /* Validation.swift */; };
+		BB20F85727EBFD87009BD229 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39042A27BF006100B973D3 /* EmailValidator.swift */; };
+		BB20F85827EBFDB8009BD229 /* EmailValidatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39045427C0AEEC00B973D3 /* EmailValidatorSpy.swift */; };
+		BB20F85A27EBFDE7009BD229 /* ValidationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB20F85927EBFDE7009BD229 /* ValidationSpy.swift */; };
+		BB20F85D27EBFEDB009BD229 /* EmailValidatorAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEEDF3927C2965D00CF9774 /* EmailValidatorAdapter.swift */; };
+		BB20F85E27EBFF28009BD229 /* EmailValidatorAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEEDF2B27C2920800CF9774 /* EmailValidatorAdapterTests.swift */; };
+		BB20F85F27EBFF68009BD229 /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEEDF1F27C2920800CF9774 /* Validation.framework */; platformFilter = ios; };
+		BB20F86027EBFF68009BD229 /* Validation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BBEEDF1F27C2920800CF9774 /* Validation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BB20F86427EC0318009BD229 /* RequiredFieldsValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB20F86327EC0318009BD229 /* RequiredFieldsValidationTests.swift */; };
+		BB20F86827EC8AC8009BD229 /* RequiredFieldValidatior.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB20F86727EC8AC8009BD229 /* RequiredFieldValidatior.swift */; };
+		BB20F86927EC8C40009BD229 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D20F127B838EA000AFD66 /* TestHelpers.swift */; };
+		BB20F86E27ED31D2009BD229 /* EmailValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB20F86C27ED31A9009BD229 /* EmailValidationTests.swift */; };
+		BB20F87027ED38BE009BD229 /* EmailValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB20F86F27ED38BE009BD229 /* EmailValidation.swift */; };
+		BB20F87227ED3AD2009BD229 /* ValidationCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB20F87127ED3AD2009BD229 /* ValidationCompositeTests.swift */; };
+		BB20F87427ED3EF7009BD229 /* ValidationComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB20F87327ED3EF7009BD229 /* ValidationComposite.swift */; };
+		BB20F87727ED3FBC009BD229 /* ValidationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB20F87627ED3FBC009BD229 /* ValidationSpy.swift */; };
 		BB223BF527C1792D0053299D /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB223BF427C1792D0053299D /* TestExtensions.swift */; };
 		BB223BF827C190B00053299D /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB223BF727C190B00053299D /* UIViewControllerExtensions.swift */; };
 		BB223BFA27C193C90053299D /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB223BF927C193C90053299D /* Storyboarded.swift */; };
@@ -23,7 +39,6 @@
 		BB39042327BEFD6B00B973D3 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39042227BEFD6B00B973D3 /* AlertView.swift */; };
 		BB39042527BEFD9500B973D3 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39042427BEFD9500B973D3 /* SignUpPresenter.swift */; };
 		BB39042727BEFDCD00B973D3 /* SignupPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39042627BEFDCD00B973D3 /* SignupPresenterTests.swift */; };
-		BB39042B27BF006100B973D3 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39042A27BF006100B973D3 /* EmailValidator.swift */; };
 		BB39043827C08B6100B973D3 /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39043727C08B6100B973D3 /* AccountModelFactory.swift */; };
 		BB39043D27C08FE100B973D3 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB260E8727B7126000A089F2 /* Domain.framework */; };
 		BB39043E27C08FE100B973D3 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB260E8727B7126000A089F2 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -35,10 +50,10 @@
 		BB39044C27C0ABFF00B973D3 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39044B27C0ABFF00B973D3 /* SignUpViewModel.swift */; };
 		BB39044E27C0AC9000B973D3 /* SignUpMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39044D27C0AC9000B973D3 /* SignUpMapper.swift */; };
 		BB39045227C0AE9100B973D3 /* AlertViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39045127C0AE9100B973D3 /* AlertViewSpy.swift */; };
-		BB39045527C0AEEC00B973D3 /* EmailvalidatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39045427C0AEEC00B973D3 /* EmailvalidatorSpy.swift */; };
 		BB39045727C0AF1B00B973D3 /* LoadingViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39045627C0AF1B00B973D3 /* LoadingViewSpy.swift */; };
 		BB39045A27C0AF5B00B973D3 /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39045927C0AF5B00B973D3 /* AddAccountSpy.swift */; };
 		BB39046227C0B17800B973D3 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39046127C0B17800B973D3 /* TestFactories.swift */; };
+		BB543D3627EDF4E800896F83 /* EmailValidatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39045427C0AEEC00B973D3 /* EmailValidatorSpy.swift */; };
 		BB566B1827C125B800B66934 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB566B1027C125B800B66934 /* UI.framework */; };
 		BB566B1D27C125B800B66934 /* SignUpViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB566B1C27C125B800B66934 /* SignUpViewControllerTests.swift */; };
 		BB566B2A27C1307F00B66934 /* Presenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB39040427BEFCED00B973D3 /* Presenter.framework */; };
@@ -67,10 +82,8 @@
 		BBC8AE1427C7162000676A75 /* WeakVarProxies.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8AE1327C7162000676A75 /* WeakVarProxies.swift */; };
 		BBC8AE1927C7E23100676A75 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8AE1827C7E23100676A75 /* Enviroment.swift */; };
 		BBEEDF2727C2920800CF9774 /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEEDF1F27C2920800CF9774 /* Validation.framework */; };
-		BBEEDF2C27C2920800CF9774 /* EmailValidatorAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEEDF2B27C2920800CF9774 /* EmailValidatorAdapterTests.swift */; };
 		BBEEDF3427C2930600CF9774 /* Presenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB39040427BEFCED00B973D3 /* Presenter.framework */; platformFilter = ios; };
 		BBEEDF3527C2930600CF9774 /* Presenter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB39040427BEFCED00B973D3 /* Presenter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BBEEDF3A27C2965D00CF9774 /* EmailValidatorAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEEDF3927C2965D00CF9774 /* EmailValidatorAdapter.swift */; };
 		BBEEDF4227C2CA7400CF9774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEEDF4127C2CA7400CF9774 /* AppDelegate.swift */; };
 		BBEEDF4427C2CA7400CF9774 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEEDF4327C2CA7400CF9774 /* SceneDelegate.swift */; };
 		BBEEDF4B27C2CA7600CF9774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBEEDF4A27C2CA7600CF9774 /* Assets.xcassets */; };
@@ -94,6 +107,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		BB20F86127EBFF68009BD229 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB260E6D27B7121A00A089F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBEEDF1E27C2920800CF9774;
+			remoteInfo = Validation;
+		};
 		BB260EA227B7159600A089F2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BB260E6D27B7121A00A089F2 /* Project object */;
@@ -285,6 +305,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				BB6D211C27B94D19000AFD66 /* Data.framework in Embed Frameworks */,
+				BB20F86027EBFF68009BD229 /* Validation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +343,15 @@
 		BB06165C27B7E77A0088AFFE /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		BB06165E27B7E99E0088AFFE /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		BB06166127B800830088AFFE /* ExtensionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelper.swift; sourceTree = "<group>"; };
+		BB20F85527EBFD13009BD229 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		BB20F85927EBFDE7009BD229 /* ValidationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationSpy.swift; sourceTree = "<group>"; };
+		BB20F86327EC0318009BD229 /* RequiredFieldsValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequiredFieldsValidationTests.swift; sourceTree = "<group>"; };
+		BB20F86727EC8AC8009BD229 /* RequiredFieldValidatior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequiredFieldValidatior.swift; sourceTree = "<group>"; };
+		BB20F86C27ED31A9009BD229 /* EmailValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidationTests.swift; sourceTree = "<group>"; };
+		BB20F86F27ED38BE009BD229 /* EmailValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidation.swift; sourceTree = "<group>"; };
+		BB20F87127ED3AD2009BD229 /* ValidationCompositeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationCompositeTests.swift; sourceTree = "<group>"; };
+		BB20F87327ED3EF7009BD229 /* ValidationComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationComposite.swift; sourceTree = "<group>"; };
+		BB20F87627ED3FBC009BD229 /* ValidationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationSpy.swift; sourceTree = "<group>"; };
 		BB223BF427C1792D0053299D /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 		BB223BF727C190B00053299D /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		BB223BF927C193C90053299D /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -342,7 +372,7 @@
 		BB39044B27C0ABFF00B973D3 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		BB39044D27C0AC9000B973D3 /* SignUpMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMapper.swift; sourceTree = "<group>"; };
 		BB39045127C0AE9100B973D3 /* AlertViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewSpy.swift; sourceTree = "<group>"; };
-		BB39045427C0AEEC00B973D3 /* EmailvalidatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailvalidatorSpy.swift; sourceTree = "<group>"; };
+		BB39045427C0AEEC00B973D3 /* EmailValidatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorSpy.swift; sourceTree = "<group>"; };
 		BB39045627C0AF1B00B973D3 /* LoadingViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewSpy.swift; sourceTree = "<group>"; };
 		BB39045927C0AF5B00B973D3 /* AddAccountSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountSpy.swift; sourceTree = "<group>"; };
 		BB39046127C0B17800B973D3 /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
@@ -446,6 +476,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB20F85F27EBFF68009BD229 /* Validation.framework in Frameworks */,
 				BB6D211B27B94D19000AFD66 /* Data.framework in Frameworks */,
 				BB6850F427B9F79800B2F8DF /* Alamofire in Frameworks */,
 			);
@@ -521,6 +552,59 @@
 				BB06166127B800830088AFFE /* ExtensionHelper.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		BB20F85B27EBFEB5009BD229 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				BBEEDF3927C2965D00CF9774 /* EmailValidatorAdapter.swift */,
+			);
+			path = Validator;
+			sourceTree = "<group>";
+		};
+		BB20F85C27EBFECB009BD229 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				BBEEDF2B27C2920800CF9774 /* EmailValidatorAdapterTests.swift */,
+			);
+			path = Validator;
+			sourceTree = "<group>";
+		};
+		BB20F86527EC8A6A009BD229 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BB39042A27BF006100B973D3 /* EmailValidator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BB20F86627EC8A78009BD229 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				BB20F86727EC8AC8009BD229 /* RequiredFieldValidatior.swift */,
+				BB20F87327ED3EF7009BD229 /* ValidationComposite.swift */,
+				BB20F86F27ED38BE009BD229 /* EmailValidation.swift */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
+		BB20F86A27EC8D05009BD229 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BB39045427C0AEEC00B973D3 /* EmailValidatorSpy.swift */,
+				BB20F87627ED3FBC009BD229 /* ValidationSpy.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		BB20F86B27EC8D24009BD229 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				BB20F86C27ED31A9009BD229 /* EmailValidationTests.swift */,
+				BB20F86327EC0318009BD229 /* RequiredFieldsValidationTests.swift */,
+				BB20F87127ED3AD2009BD229 /* ValidationCompositeTests.swift */,
+			);
+			name = Validators;
 			sourceTree = "<group>";
 		};
 		BB223BEF27C16DED0053299D /* SignUp */ = {
@@ -703,7 +787,7 @@
 		BB39042927BF005300B973D3 /* Validators */ = {
 			isa = PBXGroup;
 			children = (
-				BB39042A27BF006100B973D3 /* EmailValidator.swift */,
+				BB20F85527EBFD13009BD229 /* Validation.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
@@ -738,7 +822,7 @@
 		BB39045327C0AED700B973D3 /* Validators */ = {
 			isa = PBXGroup;
 			children = (
-				BB39045427C0AEEC00B973D3 /* EmailvalidatorSpy.swift */,
+				BB20F85927EBFDE7009BD229 /* ValidationSpy.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
@@ -814,6 +898,7 @@
 		BB6D210727B94B30000AFD66 /* Infra */ = {
 			isa = PBXGroup;
 			children = (
+				BB20F85B27EBFEB5009BD229 /* Validator */,
 				BB6850F727BCACA000B2F8DF /* Http */,
 			);
 			path = Infra;
@@ -822,6 +907,7 @@
 		BB6D211127B94B30000AFD66 /* InfraTests */ = {
 			isa = PBXGroup;
 			children = (
+				BB20F85C27EBFECB009BD229 /* Validator */,
 				BB6850F827BCAD1E00B2F8DF /* Http */,
 			);
 			path = InfraTests;
@@ -880,7 +966,8 @@
 		BBEEDF2027C2920800CF9774 /* Validation */ = {
 			isa = PBXGroup;
 			children = (
-				BBEEDF3927C2965D00CF9774 /* EmailValidatorAdapter.swift */,
+				BB20F86627EC8A78009BD229 /* Validators */,
+				BB20F86527EC8A6A009BD229 /* Protocols */,
 			);
 			path = Validation;
 			sourceTree = "<group>";
@@ -888,7 +975,8 @@
 		BBEEDF2A27C2920800CF9774 /* ValidationTests */ = {
 			isa = PBXGroup;
 			children = (
-				BBEEDF2B27C2920800CF9774 /* EmailValidatorAdapterTests.swift */,
+				BB20F86A27EC8D05009BD229 /* Protocols */,
+				BB20F86B27EC8D24009BD229 /* Validators */,
 			);
 			path = ValidationTests;
 			sourceTree = "<group>";
@@ -1173,6 +1261,7 @@
 			);
 			dependencies = (
 				BB6D211E27B94D19000AFD66 /* PBXTargetDependency */,
+				BB20F86227EBFF68009BD229 /* PBXTargetDependency */,
 			);
 			name = Infra;
 			packageProductDependencies = (
@@ -1541,7 +1630,7 @@
 				BB39044E27C0AC9000B973D3 /* SignUpMapper.swift in Sources */,
 				BB39044927C0A06900B973D3 /* LoadingView.swift in Sources */,
 				BB39042327BEFD6B00B973D3 /* AlertView.swift in Sources */,
-				BB39042B27BF006100B973D3 /* EmailValidator.swift in Sources */,
+				BB20F85627EBFD13009BD229 /* Validation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1556,7 +1645,7 @@
 				BB39042727BEFDCD00B973D3 /* SignupPresenterTests.swift in Sources */,
 				BB39044727C09E7900B973D3 /* TestHelpers.swift in Sources */,
 				BB39046227C0B17800B973D3 /* TestFactories.swift in Sources */,
-				BB39045527C0AEEC00B973D3 /* EmailvalidatorSpy.swift in Sources */,
+				BB20F85A27EBFDE7009BD229 /* ValidationSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1584,6 +1673,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB6850F627BCAB5600B2F8DF /* AlamofireAdapter.swift in Sources */,
+				BB20F85D27EBFEDB009BD229 /* EmailValidatorAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1593,6 +1683,7 @@
 			files = (
 				BB6850FA27BCAD2900B2F8DF /* UrlProtocolStub.swift in Sources */,
 				BB6D211327B94B30000AFD66 /* AlamofireAdapterTests.swift in Sources */,
+				BB20F85E27EBFF28009BD229 /* EmailValidatorAdapterTests.swift in Sources */,
 				BB6D212027B94D61000AFD66 /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1609,7 +1700,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBEEDF3A27C2965D00CF9774 /* EmailValidatorAdapter.swift in Sources */,
+				BB20F87027ED38BE009BD229 /* EmailValidation.swift in Sources */,
+				BB20F86827EC8AC8009BD229 /* RequiredFieldValidatior.swift in Sources */,
+				BB20F87427ED3EF7009BD229 /* ValidationComposite.swift in Sources */,
+				BB20F85727EBFD87009BD229 /* EmailValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1617,7 +1711,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBEEDF2C27C2920800CF9774 /* EmailValidatorAdapterTests.swift in Sources */,
+				BB20F87227ED3AD2009BD229 /* ValidationCompositeTests.swift in Sources */,
+				BB20F86427EC0318009BD229 /* RequiredFieldsValidationTests.swift in Sources */,
+				BB20F86E27ED31D2009BD229 /* EmailValidationTests.swift in Sources */,
+				BB20F87727ED3FBC009BD229 /* ValidationSpy.swift in Sources */,
+				BB20F85827EBFDB8009BD229 /* EmailValidatorSpy.swift in Sources */,
+				BB20F86927EC8C40009BD229 /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1642,6 +1741,7 @@
 			files = (
 				BB93172E27C59CC8005E044D /* AddAccountSpy.swift in Sources */,
 				BBEEDF5927C2CA7700CF9774 /* SignUpComposerTests.swift in Sources */,
+				BB543D3627EDF4E800896F83 /* EmailValidatorSpy.swift in Sources */,
 				BB8DD68E27C84FE100669702 /* TestFactories.swift in Sources */,
 				BB93172F27C59D52005E044D /* TestHelpers.swift in Sources */,
 			);
@@ -1650,6 +1750,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		BB20F86227EBFF68009BD229 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = BBEEDF1E27C2920800CF9774 /* Validation */;
+			targetProxy = BB20F86127EBFF68009BD229 /* PBXContainerItemProxy */;
+		};
 		BB260EA327B7159600A089F2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BB260E9827B7159600A089F2 /* Data */;
@@ -1829,7 +1935,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1888,7 +1994,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -1918,7 +2024,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.Domain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1948,7 +2054,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.Domain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1978,7 +2084,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.Data;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -2008,7 +2114,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.Data;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -2027,6 +2133,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 56EQ48SVZJ;
 				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.DataTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2044,6 +2151,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 56EQ48SVZJ;
 				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.DataTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2073,6 +2181,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.Presenter;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -2104,6 +2213,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.Presenter;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -2128,6 +2238,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.PresenterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2152,6 +2263,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.PresenterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2181,6 +2293,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.UI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -2212,6 +2325,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.UI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -2230,6 +2344,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 56EQ48SVZJ;
 				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2247,6 +2362,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 56EQ48SVZJ;
 				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2276,7 +2392,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.Infra;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -2308,7 +2424,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.Infra;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -2327,6 +2443,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 56EQ48SVZJ;
 				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.InfraTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2344,6 +2461,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 56EQ48SVZJ;
 				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.InfraTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2360,6 +2478,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 56EQ48SVZJ;
 				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.UseCasesIntegrationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2376,6 +2495,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 56EQ48SVZJ;
 				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.UseCasesIntegrationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2405,6 +2525,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.Validation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -2436,6 +2557,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.Validation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -2454,6 +2576,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 56EQ48SVZJ;
 				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.ValidationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2471,6 +2594,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 56EQ48SVZJ;
 				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.ValidationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2497,11 +2621,12 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.Main;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2529,11 +2654,12 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.Main;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2554,7 +2680,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 56EQ48SVZJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.MainTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2575,7 +2702,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 56EQ48SVZJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.MainTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

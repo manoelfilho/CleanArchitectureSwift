@@ -12,20 +12,20 @@ import XCTest
 public class SignUpPresenter {
     
     private let alertView: AlertView
-    private let emailValidator: EmailValidator
+    private let validation: Validation
     private let addAccount: AddAccount
     private let loadingView: LoadingView
     
-    public init(alertView: AlertView, emailValidator: EmailValidator, addAccount: AddAccount, loadingView: LoadingView){
+    public init(alertView: AlertView, validation: Validation, addAccount: AddAccount, loadingView: LoadingView){
         self.alertView = alertView
-        self.emailValidator = emailValidator
+        self.validation = validation
         self.addAccount = addAccount
         self.loadingView = loadingView
     }
     
     public func signUp(viewModel: SignUpViewModel){
         
-        if let message = validate(viewModel: viewModel) {
+        if let message = validation.validate(data: viewModel.toJson()) {
         
             alertView.showMessage(viewModel: AlertViewModel(title: "Falha", message: message))
         
@@ -51,18 +51,5 @@ public class SignUpPresenter {
         
     }
     
-    func validate(viewModel: SignUpViewModel) -> String? {
-        if viewModel.username == nil || viewModel.username!.isEmpty {
-            return "O campo username é obrigatório"
-        }
-        if viewModel.email == nil || viewModel.email!.isEmpty {
-            return "O campo email é obrigatório"
-        }
-        if viewModel.password == nil || viewModel.password!.isEmpty {
-            return "O campo password é obrigatório"
-        }else if !emailValidator.isValid(email: viewModel.email!) {
-            return "O email informado está inválido"
-        }
-        return nil
-    }
+
 }

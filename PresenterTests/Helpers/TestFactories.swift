@@ -8,18 +8,6 @@
 import Foundation
 import Presenter
 
-func makeRequiredAlertViewModel(fieldText: String) -> AlertViewModel {
-    return AlertViewModel(title: "Falha", message: fieldText)
-}
-
-func makeErrorAlertViewModel(fieldText: String) -> AlertViewModel {
-    return AlertViewModel(title: "Erro", message: fieldText)
-}
-
-func makeSuccessAlertViewModel(fieldText: String) -> AlertViewModel {
-    return AlertViewModel(title: "Sucesso", message: fieldText)
-}
-
 func makeSignUpViewModel(
     confirmed: Bool? = true,
     blocked: Bool? = false,

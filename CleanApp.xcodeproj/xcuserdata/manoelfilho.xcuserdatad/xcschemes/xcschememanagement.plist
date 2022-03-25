@@ -37,12 +37,12 @@
 		<key>UI.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>6</integer>
 		</dict>
 		<key>UseCasesIntegrationTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>8</integer>
 		</dict>
 		<key>Validation.xcscheme_^#shared#^_</key>
 		<dict>
@@ -77,12 +77,37 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>BB566B0F27C125B800B66934</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BB566B1627C125B800B66934</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BB6D210527B94B30000AFD66</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>BB6D210C27B94B30000AFD66</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BB8F220427BD8C6F00F1BC29</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BBEEDF1E27C2920800CF9774</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BBEEDF2527C2920800CF9774</key>
 		<dict>
 			<key>primary</key>
 			<true/>

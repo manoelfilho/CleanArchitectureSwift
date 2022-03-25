@@ -1,6 +1,7 @@
 import XCTest
 import Main
 import UI
+import Validation
 
 class SignUpComposerTests: XCTestCase {
 
@@ -14,6 +15,14 @@ class SignUpComposerTests: XCTestCase {
             exp.fulfill()
         }
         wait(for: [exp], timeout: 1)
+    }
+    
+    func test_signUp_compose_with_correct_validations() {
+        let validations = SignUpComposer.makeValidations()
+        XCTAssertEqual(validations[0] as! RequiredFieldValidation, RequiredFieldValidation(fieldName: "username", fieldLabel: "Username"))
+        XCTAssertEqual(validations[1] as! RequiredFieldValidation, RequiredFieldValidation(fieldName: "email", fieldLabel: "Email"))
+        XCTAssertEqual(validations[2] as! RequiredFieldValidation, RequiredFieldValidation(fieldName: "password", fieldLabel: "Senha"))
+        XCTAssertEqual(validations[3] as! EmailValidation, EmailValidation(fieldName: "email", fieldLabel: "Email", emailValidator: EmailValidatorSpy()))
     }
     
 }

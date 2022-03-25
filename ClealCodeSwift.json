@@ -31,6 +31,31 @@
       "enabled": true,
       "randomResponse": false,
       "sequentialResponse": false
+    },
+    {
+      "uuid": "d8d10b47-1417-47c8-ad05-6b6bd771ccea",
+      "documentation": "Teste",
+      "method": "get",
+      "endpoint": "",
+      "responses": [
+        {
+          "uuid": "801291bd-3af0-45bf-8a7e-84382529f4d1",
+          "body": "{\n   \"status\":\"Ok\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
     }
   ],
   "proxyMode": false,

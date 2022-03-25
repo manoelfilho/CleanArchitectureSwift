@@ -1,10 +1,3 @@
-//
-//  AddAccountSpy.swift
-//  PresenterTests
-//
-//  Created by Manoel Filho on 19/02/22.
-//
-
 import Foundation
 import Presenter
 import Domain
