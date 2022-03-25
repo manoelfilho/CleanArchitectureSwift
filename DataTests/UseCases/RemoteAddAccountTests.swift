@@ -71,6 +71,13 @@ class RemoteAddAccountTests: XCTestCase {
         })
     }
     
+    func test_add_should_complete_with_email_in_use_error_forbidden(){
+        let (sut, httpClientSpy) = makeSut()
+        expec(sut, completeWith: .failure(.emailInUse), when: {
+            httpClientSpy.completeWithError(.forbiden)
+        })
+    }
+    
     /*
         Simula um objeto válido de AccountModel -> que provém do makeAccountModel
         Utiliza desse mode para validar se um sucesso do HttpClient retorna um obj válido

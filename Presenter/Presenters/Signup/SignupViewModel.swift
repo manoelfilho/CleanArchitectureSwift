@@ -28,4 +28,8 @@ public struct SignUpViewModel: Model {
         self.provider = provider
     }
     
+    public func toAddAccountModel() -> AddAccountModel {
+        return AddAccountModel(confirmed: self.confirmed!, blocked: self.blocked!, username: self.username!, email: self.email!, password: self.password!, role: self.role!, provider: self.provider!)
+    }
+    
 }
