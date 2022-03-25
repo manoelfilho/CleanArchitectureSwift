@@ -159,7 +159,7 @@ extension RemoteAddAccountTests {
         SOBRE o file: StaticString = #filePath, line: UInt = #line
         Essas duas propriedades podem ser chamadas em qualquer método de uma classe de testes. Dará acesso a linha on o erro ocorreu.
     */
-    func expec(_ sut: RemoteAddAccount, completeWith expectResult: Result<AccountModel, DomainError>, when action:() -> Void, file: StaticString = #filePath, line: UInt = #line){
+    func expec(_ sut: RemoteAddAccount, completeWith expectResult: AddAccount.Result, when action:() -> Void, file: StaticString = #filePath, line: UInt = #line){
         let exp = expectation(description: "waiting")
         sut.add(addAccountModel: makeAddAccountModel()) { receivedResult in
             switch (expectResult, receivedResult) {
