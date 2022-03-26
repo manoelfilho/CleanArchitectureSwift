@@ -81,8 +81,11 @@
 		BB95F24327EE62840076ABAB /* ApiUrlFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95F24227EE62840076ABAB /* ApiUrlFactory.swift */; };
 		BB95F24627EE632E0076ABAB /* AlamofireAdapterFactoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95F24527EE632E0076ABAB /* AlamofireAdapterFactoryFactory.swift */; };
 		BB95F24A27EE64920076ABAB /* EmailvalidatorAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95F24927EE64920076ABAB /* EmailvalidatorAdapter.swift */; };
+		BB95F24D27EEC22F0076ABAB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB95F24C27EEC22F0076ABAB /* Images.xcassets */; };
 		BBC8AE1427C7162000676A75 /* WeakVarProxies.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8AE1327C7162000676A75 /* WeakVarProxies.swift */; };
 		BBC8AE1927C7E23100676A75 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8AE1827C7E23100676A75 /* Enviroment.swift */; };
+		BBDB113D27EF45B00034028C /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDB113C27EF45B00034028C /* RoundedTextField.swift */; };
+		BBDB113F27EF47750034028C /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDB113E27EF47750034028C /* NavigationController.swift */; };
 		BBEEDF2727C2920800CF9774 /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEEDF1F27C2920800CF9774 /* Validation.framework */; };
 		BBEEDF3427C2930600CF9774 /* Presenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB39040427BEFCED00B973D3 /* Presenter.framework */; platformFilter = ios; };
 		BBEEDF3527C2930600CF9774 /* Presenter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB39040427BEFCED00B973D3 /* Presenter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -398,10 +401,13 @@
 		BB95F24227EE62840076ABAB /* ApiUrlFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiUrlFactory.swift; sourceTree = "<group>"; };
 		BB95F24527EE632E0076ABAB /* AlamofireAdapterFactoryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterFactoryFactory.swift; sourceTree = "<group>"; };
 		BB95F24927EE64920076ABAB /* EmailvalidatorAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailvalidatorAdapter.swift; sourceTree = "<group>"; };
+		BB95F24C27EEC22F0076ABAB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BBC8AE1327C7162000676A75 /* WeakVarProxies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakVarProxies.swift; sourceTree = "<group>"; };
 		BBC8AE1627C7E15900676A75 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		BBC8AE1727C7E1C800676A75 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		BBC8AE1827C7E23100676A75 /* Enviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
+		BBDB113C27EF45B00034028C /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		BBDB113E27EF47750034028C /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		BBEEDF1F27C2920800CF9774 /* Validation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Validation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBEEDF2627C2920800CF9774 /* ValidationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValidationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBEEDF2B27C2920800CF9774 /* EmailValidatorAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorAdapterTests.swift; sourceTree = "<group>"; };
@@ -849,6 +855,8 @@
 		BB566B1127C125B800B66934 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BBDB113B27EF45620034028C /* Components */,
+				BB95F24B27EEC2120076ABAB /* Resources */,
 				BB223BF627C190930053299D /* Helpers */,
 				BB223BF127C178E20053299D /* Scenes */,
 			);
@@ -958,6 +966,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		BB95F24B27EEC2120076ABAB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BB95F24C27EEC22F0076ABAB /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		BBC8AE1227C7160A00676A75 /* Proxies */ = {
 			isa = PBXGroup;
 			children = (
@@ -982,6 +998,15 @@
 				BBEEDF5827C2CA7700CF9774 /* SignUpComposerTests.swift */,
 			);
 			path = Composers;
+			sourceTree = "<group>";
+		};
+		BBDB113B27EF45620034028C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BBDB113C27EF45B00034028C /* RoundedTextField.swift */,
+				BBDB113E27EF47750034028C /* NavigationController.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		BBEEDF2027C2920800CF9774 /* Validation */ = {
@@ -1546,6 +1571,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB566B3227C1364100B66934 /* SignUp.storyboard in Resources */,
+				BB95F24D27EEC22F0076ABAB /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1676,7 +1702,9 @@
 			files = (
 				BB223BF827C190B00053299D /* UIViewControllerExtensions.swift in Sources */,
 				BB223BFA27C193C90053299D /* Storyboarded.swift in Sources */,
+				BBDB113F27EF47750034028C /* NavigationController.swift in Sources */,
 				BB566B3027C135C300B66934 /* SignUpViewController.swift in Sources */,
+				BBDB113D27EF45B00034028C /* RoundedTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2639,12 +2667,13 @@
 				DEVELOPMENT_TEAM = 56EQ48SVZJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Main/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = 4Devs;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2652,7 +2681,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.Main;
+				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.4Devs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -2672,12 +2701,13 @@
 				DEVELOPMENT_TEAM = 56EQ48SVZJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Main/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = 4Devs;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2685,7 +2715,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.Main;
+				PRODUCT_BUNDLE_IDENTIFIER = clean.br.eti.manoelfilho.4Devs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import Presenter
+import SwiftUI
 
 public final class SignUpViewController: UIViewController, Storyboarded {
     
@@ -22,12 +23,17 @@ public final class SignUpViewController: UIViewController, Storyboarded {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         configure()
     }
     
     private func configure(){
-        saveButton.layer.cornerRadius = 5
+        //title = "4Devs"
+        
+        usernameTextField.clipsToBounds = true
+        emailTextField.clipsToBounds = true
+        passwordTextField.clipsToBounds = true
+        
         saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
         hideKeyboardOnTap()
     }
