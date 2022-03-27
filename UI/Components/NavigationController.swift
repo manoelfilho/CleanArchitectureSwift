@@ -28,7 +28,7 @@ public final class NavigationController: UINavigationController {
         setViewControllers([viewController], animated: true)
     }
     
-    public override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+    public func pushViewController(_ viewController: UIViewController) {
         pushViewController(viewController, animated: true)
     }
     

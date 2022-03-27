@@ -85,6 +85,7 @@
 		BBC826E127F109CE006D47CB /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBC826E027F109CE006D47CB /* Welcome.storyboard */; };
 		BBC826E427F10C7D006D47CB /* WelcomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC826E327F10C7D006D47CB /* WelcomeViewControllerTests.swift */; };
 		BBC826E627F10CD6006D47CB /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC826E527F10CD6006D47CB /* WelcomeViewController.swift */; };
+		BBC826E827F12BDB006D47CB /* WelcomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC826E727F12BDB006D47CB /* WelcomeRouterTests.swift */; };
 		BBC8ADBF27F0F8FC0050BC13 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBC8ADBE27F0F8FC0050BC13 /* Login.storyboard */; };
 		BBC8ADC327F0F99E0050BC13 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8ADC227F0F99E0050BC13 /* LoginViewControllerTests.swift */; };
 		BBC8ADC527F0FA100050BC13 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8ADC427F0FA100050BC13 /* LoginViewController.swift */; };
@@ -419,6 +420,7 @@
 		BBC826E027F109CE006D47CB /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		BBC826E327F10C7D006D47CB /* WelcomeViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewControllerTests.swift; sourceTree = "<group>"; };
 		BBC826E527F10CD6006D47CB /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		BBC826E727F12BDB006D47CB /* WelcomeRouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeRouterTests.swift; sourceTree = "<group>"; };
 		BBC8ADBE27F0F8FC0050BC13 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BBC8ADC227F0F99E0050BC13 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
 		BBC8ADC427F0FA100050BC13 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -1021,6 +1023,7 @@
 			isa = PBXGroup;
 			children = (
 				BBC826E327F10C7D006D47CB /* WelcomeViewControllerTests.swift */,
+				BBC826E727F12BDB006D47CB /* WelcomeRouterTests.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -1816,6 +1819,7 @@
 				BBC826E427F10C7D006D47CB /* WelcomeViewControllerTests.swift in Sources */,
 				BB223BF527C1792D0053299D /* TestExtensions.swift in Sources */,
 				BBC8ADC627F100210050BC13 /* TestHelpers.swift in Sources */,
+				BBC826E827F12BDB006D47CB /* WelcomeRouterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
