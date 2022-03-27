@@ -4,7 +4,6 @@
 //
 //  Created by Manoel Filho on 18/02/22.
 //
-
 import Foundation
 import Domain
 
@@ -15,5 +14,9 @@ func makeAddAccountModel() -> AddAccountModel {
 
 //simula um AccountModel
 func makeAccountModel() -> AccountModel {
-    return AccountModel(accessToken: "any_token")
+    return AccountModel(id: 1, username: "any", email: "email@email.com", provider: "local", confirmed: true, blocked: false, createdAt: "data", updatedAt: "data")
+}
+
+func makeAuthenticationModel() -> AuthenticationModel {
+    return AuthenticationModel(email: "email@email.com", password: "secret")
 }

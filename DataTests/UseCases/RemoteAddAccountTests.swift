@@ -71,6 +71,13 @@ class RemoteAddAccountTests: XCTestCase {
         })
     }
     
+    func test_add_should_complete_with_email_in_use_error_forbidden(){
+        let (sut, httpClientSpy) = makeSut()
+        expec(sut, completeWith: .failure(.emailInUse), when: {
+            httpClientSpy.completeWithError(.forbiden)
+        })
+    }
+    
     /*
         Simula um objeto válido de AccountModel -> que provém do makeAccountModel
         Utiliza desse mode para validar se um sucesso do HttpClient retorna um obj válido
@@ -152,7 +159,7 @@ extension RemoteAddAccountTests {
         SOBRE o file: StaticString = #filePath, line: UInt = #line
         Essas duas propriedades podem ser chamadas em qualquer método de uma classe de testes. Dará acesso a linha on o erro ocorreu.
     */
-    func expec(_ sut: RemoteAddAccount, completeWith expectResult: Result<AccountModel, DomainError>, when action:() -> Void, file: StaticString = #filePath, line: UInt = #line){
+    func expec(_ sut: RemoteAddAccount, completeWith expectResult: AddAccount.Result, when action:() -> Void, file: StaticString = #filePath, line: UInt = #line){
         let exp = expectation(description: "waiting")
         sut.add(addAccountModel: makeAddAccountModel()) { receivedResult in
             switch (expectResult, receivedResult) {
