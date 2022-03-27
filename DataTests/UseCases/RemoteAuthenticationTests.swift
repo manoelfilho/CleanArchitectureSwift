@@ -4,11 +4,18 @@ import Data
 
 class RemoteAuthenticationTests: XCTestCase {
     
-    func test_add_should_call_http_client_with_correct_url() throws {
+    func test_auth_should_call_http_client_with_correct_url() throws {
         let url = makeUrl()
         let (sut, httpClientSpy) = makeSut()
-        sut.authenticate()
+        sut.authenticate(authenticationModel: makeAuthenticationModel())
         XCTAssertEqual(httpClientSpy.urls, [url])
+    }
+    
+    func test_auth_should_call_http_client_with_correct_data() throws {
+        let (sut, httpClientSpy) = makeSut()
+        let authenticationModel = makeAuthenticationModel()
+        sut.authenticate(authenticationModel: authenticationModel)
+        XCTAssertEqual(httpClientSpy.data, authenticationModel.toData())
     }
     
 }
