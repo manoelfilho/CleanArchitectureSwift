@@ -83,6 +83,8 @@
 		BB95F24A27EE64920076ABAB /* EmailvalidatorAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95F24927EE64920076ABAB /* EmailvalidatorAdapter.swift */; };
 		BB95F24D27EEC22F0076ABAB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB95F24C27EEC22F0076ABAB /* Images.xcassets */; };
 		BBC8ADBF27F0F8FC0050BC13 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBC8ADBE27F0F8FC0050BC13 /* Login.storyboard */; };
+		BBC8ADC327F0F99E0050BC13 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8ADC227F0F99E0050BC13 /* LoginViewControllerTests.swift */; };
+		BBC8ADC527F0FA100050BC13 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8ADC427F0FA100050BC13 /* LoginViewController.swift */; };
 		BBC8AE1427C7162000676A75 /* WeakVarProxies.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8AE1327C7162000676A75 /* WeakVarProxies.swift */; };
 		BBC8AE1927C7E23100676A75 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8AE1827C7E23100676A75 /* Enviroment.swift */; };
 		BBDB113D27EF45B00034028C /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDB113C27EF45B00034028C /* RoundedTextField.swift */; };
@@ -411,6 +413,8 @@
 		BB95F24927EE64920076ABAB /* EmailvalidatorAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailvalidatorAdapter.swift; sourceTree = "<group>"; };
 		BB95F24C27EEC22F0076ABAB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BBC8ADBE27F0F8FC0050BC13 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		BBC8ADC227F0F99E0050BC13 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
+		BBC8ADC427F0FA100050BC13 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BBC8AE1327C7162000676A75 /* WeakVarProxies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakVarProxies.swift; sourceTree = "<group>"; };
 		BBC8AE1627C7E15900676A75 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		BBC8AE1727C7E1C800676A75 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -662,6 +666,7 @@
 		BB223BF227C178FA0053299D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				BBC8ADC127F0F9880050BC13 /* Login */,
 				BB223BF027C178250053299D /* SignUp */,
 			);
 			path = Scenes;
@@ -997,7 +1002,16 @@
 		BBC8ADC027F0F9040050BC13 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				BBC8ADC427F0FA100050BC13 /* LoginViewController.swift */,
 				BBC8ADBE27F0F8FC0050BC13 /* Login.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BBC8ADC127F0F9880050BC13 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BBC8ADC227F0F99E0050BC13 /* LoginViewControllerTests.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1756,6 +1770,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC8ADC527F0FA100050BC13 /* LoginViewController.swift in Sources */,
 				BB223BF827C190B00053299D /* UIViewControllerExtensions.swift in Sources */,
 				BB223BFA27C193C90053299D /* Storyboarded.swift in Sources */,
 				BBDB113F27EF47750034028C /* NavigationController.swift in Sources */,
@@ -1768,6 +1783,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC8ADC327F0F99E0050BC13 /* LoginViewControllerTests.swift in Sources */,
 				BB566B1D27C125B800B66934 /* SignUpViewControllerTests.swift in Sources */,
 				BB223BF527C1792D0053299D /* TestExtensions.swift in Sources */,
 			);
