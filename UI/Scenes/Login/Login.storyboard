@@ -17,18 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="56w-qW-1Mj" userLabel="input_group">
-                                <rect key="frame" x="20" y="352" width="374" height="170"/>
+                                <rect key="frame" x="20" y="352" width="374" height="110"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hjT-kY-JS9" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="aUV-TX-hUh"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="username"/>
-                                    </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A9a-Zw-dXq" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="60" width="374" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="zn2-eL-YgV"/>
                                         </constraints>
@@ -36,7 +28,7 @@
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h5A-WL-ehm" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="120" width="374" height="50"/>
+                                        <rect key="frame" x="0.0" y="60" width="374" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="ltT-1I-3Fk"/>
                                         </constraints>
@@ -46,12 +38,12 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dZ-z8-l5r" userLabel="save_button">
-                                <rect key="frame" x="20" y="537" width="374" height="50"/>
+                                <rect key="frame" x="20" y="477" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="1wV-Tp-3IB"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Cadastrar">
+                                <buttonConfiguration key="configuration" style="filled" title="Login">
                                     <backgroundConfiguration key="background" cornerRadius="25">
                                         <color key="backgroundColor" name="Yellow"/>
                                     </backgroundConfiguration>
@@ -69,8 +61,8 @@
                                 <rect key="frame" x="188.5" y="115.5" width="37" height="37"/>
                                 <color key="color" name="Yellow"/>
                             </activityIndicatorView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cadastro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9P-1y-LXW" userLabel="cadastro">
-                                <rect key="frame" x="134.5" y="239" width="145" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9P-1y-LXW" userLabel="cadastro">
+                                <rect key="frame" x="163.5" y="239" width="87.5" height="42"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
                                 <color key="textColor" name="Text1"/>
                                 <nil key="highlightedColor"/>
@@ -82,15 +74,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2DJ-W3-f5r" userLabel="bottom_description">
-                                <rect key="frame" x="20" y="607" width="374" height="20.5"/>
+                                <rect key="frame" x="20" y="547" width="374" height="20.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Já tem uma conta?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQl-OS-xmA" userLabel="have_account">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Não tem uma conta?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQl-OS-xmA" userLabel="have_account">
                                         <rect key="frame" x="0.0" y="0.0" width="187" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" name="Text1"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Faça seu login" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2v-cv-4rh" userLabel="do_login">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Faça seu cadastro" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2v-cv-4rh" userLabel="do_login">
                                         <rect key="frame" x="187" y="0.0" width="187" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" name="Color"/>
@@ -132,7 +124,6 @@
                         <outlet property="loadingIndicator" destination="I85-44-wkR" id="Gm3-5M-xvG"/>
                         <outlet property="passwordTextField" destination="h5A-WL-ehm" id="RGx-pp-0cM"/>
                         <outlet property="saveButton" destination="5dZ-z8-l5r" id="sxO-5p-yJ4"/>
-                        <outlet property="usernameTextField" destination="hjT-kY-JS9" id="ijc-QN-I32"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xc5-YW-uJj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

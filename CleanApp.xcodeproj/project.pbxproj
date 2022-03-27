@@ -82,6 +82,7 @@
 		BB95F24627EE632E0076ABAB /* AlamofireAdapterFactoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95F24527EE632E0076ABAB /* AlamofireAdapterFactoryFactory.swift */; };
 		BB95F24A27EE64920076ABAB /* EmailvalidatorAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95F24927EE64920076ABAB /* EmailvalidatorAdapter.swift */; };
 		BB95F24D27EEC22F0076ABAB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB95F24C27EEC22F0076ABAB /* Images.xcassets */; };
+		BBC8ADBF27F0F8FC0050BC13 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBC8ADBE27F0F8FC0050BC13 /* Login.storyboard */; };
 		BBC8AE1427C7162000676A75 /* WeakVarProxies.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8AE1327C7162000676A75 /* WeakVarProxies.swift */; };
 		BBC8AE1927C7E23100676A75 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8AE1827C7E23100676A75 /* Enviroment.swift */; };
 		BBDB113D27EF45B00034028C /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDB113C27EF45B00034028C /* RoundedTextField.swift */; };
@@ -409,6 +410,7 @@
 		BB95F24527EE632E0076ABAB /* AlamofireAdapterFactoryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterFactoryFactory.swift; sourceTree = "<group>"; };
 		BB95F24927EE64920076ABAB /* EmailvalidatorAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailvalidatorAdapter.swift; sourceTree = "<group>"; };
 		BB95F24C27EEC22F0076ABAB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BBC8ADBE27F0F8FC0050BC13 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BBC8AE1327C7162000676A75 /* WeakVarProxies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakVarProxies.swift; sourceTree = "<group>"; };
 		BBC8AE1627C7E15900676A75 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		BBC8AE1727C7E1C800676A75 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -651,6 +653,7 @@
 		BB223BF127C178E20053299D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				BBC8ADC027F0F9040050BC13 /* Login */,
 				BB223BEF27C16DED0053299D /* SignUp */,
 			);
 			path = Scenes;
@@ -989,6 +992,14 @@
 				BB95F24C27EEC22F0076ABAB /* Images.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		BBC8ADC027F0F9040050BC13 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BBC8ADBE27F0F8FC0050BC13 /* Login.storyboard */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		BBC8AE1227C7160A00676A75 /* Proxies */ = {
@@ -1609,6 +1620,7 @@
 			files = (
 				BB566B3227C1364100B66934 /* SignUp.storyboard in Resources */,
 				BB95F24D27EEC22F0076ABAB /* Images.xcassets in Resources */,
+				BBC8ADBF27F0F8FC0050BC13 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
