@@ -47,7 +47,7 @@
 		BB39044627C0911B00B973D3 /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39043727C08B6100B973D3 /* AccountModelFactory.swift */; };
 		BB39044727C09E7900B973D3 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D20F127B838EA000AFD66 /* TestHelpers.swift */; };
 		BB39044927C0A06900B973D3 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39044827C0A06900B973D3 /* LoadingView.swift */; };
-		BB39044C27C0ABFF00B973D3 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39044B27C0ABFF00B973D3 /* SignUpViewModel.swift */; };
+		BB39044C27C0ABFF00B973D3 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39044B27C0ABFF00B973D3 /* SignUpRequest.swift */; };
 		BB39045227C0AE9100B973D3 /* AlertViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39045127C0AE9100B973D3 /* AlertViewSpy.swift */; };
 		BB39045727C0AF1B00B973D3 /* LoadingViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39045627C0AF1B00B973D3 /* LoadingViewSpy.swift */; };
 		BB39045A27C0AF5B00B973D3 /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39045927C0AF5B00B973D3 /* AddAccountSpy.swift */; };
@@ -118,7 +118,7 @@
 		BBF2C97027F08659001D3F6A /* RemoteAuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2C96F27F08659001D3F6A /* RemoteAuthenticationTests.swift */; };
 		BBF2C97227F0886F001D3F6A /* RemoteAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2C97127F0886F001D3F6A /* RemoteAuthentication.swift */; };
 		BBF2C97527F096F8001D3F6A /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2C97427F096F8001D3F6A /* LoginPresenterTests.swift */; };
-		BBF2C97827F0DE18001D3F6A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2C97727F0DE18001D3F6A /* LoginViewModel.swift */; };
+		BBF2C97827F0DE18001D3F6A /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2C97727F0DE18001D3F6A /* LoginRequest.swift */; };
 		BBF2C97A27F0DEE6001D3F6A /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2C97927F0DEE6001D3F6A /* LoginPresenter.swift */; };
 		BBF2C97C27F0E436001D3F6A /* AuthenticationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2C97B27F0E436001D3F6A /* AuthenticationSpy.swift */; };
 		BBF9AF0C27B7337900EDA0B1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF9AF0B27B7337900EDA0B1 /* Model.swift */; };
@@ -388,7 +388,7 @@
 		BB39042A27BF006100B973D3 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		BB39043727C08B6100B973D3 /* AccountModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModelFactory.swift; sourceTree = "<group>"; };
 		BB39044827C0A06900B973D3 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		BB39044B27C0ABFF00B973D3 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		BB39044B27C0ABFF00B973D3 /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
 		BB39045127C0AE9100B973D3 /* AlertViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewSpy.swift; sourceTree = "<group>"; };
 		BB39045427C0AEEC00B973D3 /* EmailValidatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorSpy.swift; sourceTree = "<group>"; };
 		BB39045627C0AF1B00B973D3 /* LoadingViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewSpy.swift; sourceTree = "<group>"; };
@@ -445,7 +445,7 @@
 		BBF2C96F27F08659001D3F6A /* RemoteAuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthenticationTests.swift; sourceTree = "<group>"; };
 		BBF2C97127F0886F001D3F6A /* RemoteAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteAuthentication.swift; sourceTree = "<group>"; };
 		BBF2C97427F096F8001D3F6A /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
-		BBF2C97727F0DE18001D3F6A /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		BBF2C97727F0DE18001D3F6A /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		BBF2C97927F0DEE6001D3F6A /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		BBF2C97B27F0E436001D3F6A /* AuthenticationSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationSpy.swift; sourceTree = "<group>"; };
 		BBF9AF0B27B7337900EDA0B1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -839,7 +839,7 @@
 			isa = PBXGroup;
 			children = (
 				BB39042427BEFD9500B973D3 /* SignUpPresenter.swift */,
-				BB39044B27C0ABFF00B973D3 /* SignUpViewModel.swift */,
+				BB39044B27C0ABFF00B973D3 /* SignUpRequest.swift */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -1149,7 +1149,7 @@
 		BBF2C97627F0DDBF001D3F6A /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				BBF2C97727F0DE18001D3F6A /* LoginViewModel.swift */,
+				BBF2C97727F0DE18001D3F6A /* LoginRequest.swift */,
 				BBF2C97927F0DEE6001D3F6A /* LoginPresenter.swift */,
 			);
 			path = Login;
@@ -1767,8 +1767,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB39042527BEFD9500B973D3 /* SignUpPresenter.swift in Sources */,
-				BB39044C27C0ABFF00B973D3 /* SignUpViewModel.swift in Sources */,
-				BBF2C97827F0DE18001D3F6A /* LoginViewModel.swift in Sources */,
+				BB39044C27C0ABFF00B973D3 /* SignUpRequest.swift in Sources */,
+				BBF2C97827F0DE18001D3F6A /* LoginRequest.swift in Sources */,
 				BB39044927C0A06900B973D3 /* LoadingView.swift in Sources */,
 				BB39042327BEFD6B00B973D3 /* AlertView.swift in Sources */,
 				BB20F85627EBFD13009BD229 /* Validation.swift in Sources */,

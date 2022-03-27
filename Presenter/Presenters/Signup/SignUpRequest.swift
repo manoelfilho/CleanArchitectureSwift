@@ -1,14 +1,7 @@
-//
-//  SignupViewModel.swift
-//  Presenter
-//
-//  Created by Manoel Filho on 19/02/22.
-//
-
 import Foundation
 import Domain
 
-public struct SignUpViewModel: Model {
+public struct SignUpRequest: Model {
     
     public var confirmed: Bool?
     public var blocked: Bool?

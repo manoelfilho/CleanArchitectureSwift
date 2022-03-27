@@ -1,10 +1,3 @@
-//
-//  UITests.swift
-//  UITests
-//
-//  Created by Manoel Filho on 19/02/22.
-//
-
 import XCTest
 import UIKit
 import Presenter
@@ -25,21 +18,21 @@ class SignUpViewControllerTests: XCTestCase {
     }
     
     func test_save_button_calls_signup_on_tap(){
-        var signUpViewModel: SignUpViewModel?
-        let sut = makeSut(signUpSpy: { signUpViewModel = $0 })
+        var signUpRequest: SignUpRequest?
+        let sut = makeSut(signUpSpy: { signUpRequest = $0 })
         sut.saveButton?.simulateTap()
         
         let username = sut.usernameTextField.text
         let email = sut.emailTextField.text
         let password = sut.passwordTextField.text
         
-        XCTAssertEqual(signUpViewModel, SignUpViewModel(username: username, email: email, password: password))
+        XCTAssertEqual(signUpRequest, SignUpRequest(username: username, email: email, password: password))
     }
 
 }
 
 extension SignUpViewControllerTests {
-    func makeSut(signUpSpy: ((SignUpViewModel) -> Void)? = nil) -> SignUpViewController {
+    func makeSut(signUpSpy: ((SignUpRequest) -> Void)? = nil) -> SignUpViewController {
         let sut = SignUpViewController.instantiate()
         sut.signUp = signUpSpy
         sut.loadViewIfNeeded() //Forca a chamada do ViewDidLoad do UIVieController

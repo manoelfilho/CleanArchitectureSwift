@@ -22,7 +22,7 @@ class SignupPresenterTests: XCTestCase {
             XCTAssertEqual(viewModel, makeRequiredAlertViewModel(fieldText: "O campo username é obrigatório"))
             exp.fulfill()
         }
-        sut.signUp(viewModel: makeSignUpViewModel(username: nil))
+        sut.signUp(viewModel: makeSignUpRequest(username: nil))
         wait(for: [exp], timeout: 1)
     }
     
@@ -34,7 +34,7 @@ class SignupPresenterTests: XCTestCase {
             XCTAssertEqual(viewModel, makeRequiredAlertViewModel(fieldText: "O campo email é obrigatório"))
             exp.fulfill()
         }
-        sut.signUp(viewModel: makeSignUpViewModel(email: nil))
+        sut.signUp(viewModel: makeSignUpRequest(email: nil))
         wait(for: [exp], timeout: 1)
     }
     
@@ -46,7 +46,7 @@ class SignupPresenterTests: XCTestCase {
             XCTAssertEqual(viewModel, makeRequiredAlertViewModel(fieldText: "O campo password é obrigatório"))
             exp.fulfill()
         }
-        sut.signUp(viewModel: makeSignUpViewModel(password: nil))
+        sut.signUp(viewModel: makeSignUpRequest(password: nil))
         wait(for: [exp], timeout: 1)
     }
     
@@ -54,9 +54,9 @@ class SignupPresenterTests: XCTestCase {
         let alertViewSpy = AlertViewSpy()
         let emailValidatorSpy = EmailValidatorSpy()
         let sut = makeSut(alertViewSpy:alertViewSpy, emailValidator: emailValidatorSpy)
-        let signUpViewModel = makeSignUpViewModel()
-        sut.signUp(viewModel: signUpViewModel)
-        XCTAssertEqual(emailValidatorSpy.email, signUpViewModel.email)
+        let SignUpRequest = makeSignUpRequest()
+        sut.signUp(viewModel: SignUpRequest)
+        XCTAssertEqual(emailValidatorSpy.email, SignUpRequest.email)
     }
     
     func test_signUp_should_show_error_message_if_invalid_email_is_provided(){
@@ -69,14 +69,14 @@ class SignupPresenterTests: XCTestCase {
             exp.fulfill()
         }
         emailValidatorSpy.simulateInvalidEmail()
-        sut.signUp(viewModel: makeSignUpViewModel())
+        sut.signUp(viewModel: makeSignUpRequest())
         wait(for: [exp], timeout: 1)
     }
     
     func test_signup_shoul_call_addAccount_with_correct_data(){
         let addAccountSpy = AddAccountSpy()
         let sut = makeSut(addAccount: addAccountSpy)
-        sut.signUp(viewModel: makeSignUpViewModel())
+        sut.signUp(viewModel: makeSignUpRequest())
         XCTAssertEqual(addAccountSpy.addAccountModel, makeAddAccountModel())
     }
     
@@ -89,7 +89,7 @@ class SignupPresenterTests: XCTestCase {
             XCTAssertEqual(viewModel, makeErrorAlertViewModel(fieldText: "Algo inesperado aconteceu. Tente em alguns instantes"))
             exp.fulfill()
         }
-        sut.signUp(viewModel: makeSignUpViewModel())
+        sut.signUp(viewModel: makeSignUpRequest())
         addAccountSpy.completeWithError(.unexpected)
         wait(for: [exp], timeout: 1)
     }
@@ -104,7 +104,7 @@ class SignupPresenterTests: XCTestCase {
             XCTAssertEqual(viewModel, LoadingViewModel(isLoading: true))
             exp.fulfill()
         }
-        sut.signUp(viewModel: makeSignUpViewModel())
+        sut.signUp(viewModel: makeSignUpRequest())
         
         wait(for: [exp], timeout: 1)
         
@@ -128,7 +128,7 @@ class SignupPresenterTests: XCTestCase {
             XCTAssertEqual(viewModel, makeSuccessAlertViewModel(fieldText: "Conta criada com sucesso"))
             exp.fulfill()
         }
-        sut.signUp(viewModel: makeSignUpViewModel())
+        sut.signUp(viewModel: makeSignUpRequest())
         addAccountSpy.completeWithAccount(makeAccountModel())
         wait(for: [exp], timeout: 1)
     }
@@ -138,7 +138,7 @@ class SignupPresenterTests: XCTestCase {
     func test_signUp_should_call_validation_with_correct_values(){
         let validationSpy = ValidationSpy()
         let sut = makeSut(validationSpy: validationSpy)
-        let viewModel = makeSignUpViewModel()
+        let viewModel = makeSignUpRequest()
         sut.signUp(viewModel: viewModel)
         XCTAssertTrue(NSDictionary(dictionary: validationSpy.data!).isEqual(to: viewModel.toJson()!))
     }
@@ -153,7 +153,7 @@ class SignupPresenterTests: XCTestCase {
             exp.fulfill()
         }
         validationSpy.simulateError()
-        sut.signUp(viewModel: makeSignUpViewModel())
+        sut.signUp(viewModel: makeSignUpRequest())
         wait(for: [exp], timeout: 1)
     }
     
@@ -166,7 +166,7 @@ class SignupPresenterTests: XCTestCase {
             XCTAssertEqual(viewModel, AlertViewModel(title: "Erro", message: "Algo inesperado aconteceu. Tente em alguns instantes"))
             exp.fulfill()
         }
-        sut.signUp(viewModel: makeSignUpViewModel())
+        sut.signUp(viewModel: makeSignUpRequest())
         addAccountSpy.completeWithError(.unexpected)
         wait(for: [exp], timeout: 1)
     }
@@ -180,7 +180,7 @@ class SignupPresenterTests: XCTestCase {
             XCTAssertEqual(viewModel, AlertViewModel(title: "Erro", message: "Este email já está em uso"))
             exp.fulfill()
         }
-        sut.signUp(viewModel: makeSignUpViewModel())
+        sut.signUp(viewModel: makeSignUpRequest())
         addAccountSpy.completeWithError(.emailInUse)
         wait(for: [exp], timeout: 1)
     }

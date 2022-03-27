@@ -8,16 +8,16 @@
 import Foundation
 import Presenter
 
-func makeSignUpViewModel(
+func makeSignUpRequest(
     confirmed: Bool? = true,
     blocked: Bool? = false,
     username: String? = "any",
     email: String? = "email@email.com",
     password: String? = "secret",
     role: Int? = 1,
-    provider: String? = "local") -> SignUpViewModel {
+    provider: String? = "local") -> SignUpRequest {
     
-    return SignUpViewModel(
+    return SignUpRequest(
         confirmed: confirmed,
         blocked: blocked,
         username: username,
@@ -29,6 +29,6 @@ func makeSignUpViewModel(
         
 }
 
-func makeLoginViewModel( email: String? = "email@email.com", password: String? = "secret") -> LoginViewModel {
-    return LoginViewModel( email: email, password: password)
+func makeLoginViewModel( email: String? = "email@email.com", password: String? = "secret") -> LoginRequest {
+    return LoginRequest( email: email, password: password)
 }

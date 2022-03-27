@@ -23,7 +23,7 @@ public class SignUpPresenter {
         self.loadingView = loadingView
     }
     
-    public func signUp(viewModel: SignUpViewModel){
+    public func signUp(viewModel: SignUpRequest){
         
         if let message = validation.validate(data: viewModel.toJson()) {
         
