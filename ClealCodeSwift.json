@@ -1,7 +1,7 @@
 {
   "uuid": "54c495d1-0a08-4b3e-a434-47e31c85fcd0",
   "lastMigration": 19,
-  "name": "ClealCodeSwift",
+  "name": "CleanCodeSwift",
   "endpointPrefix": "",
   "latency": 0,
   "port": 3001,
