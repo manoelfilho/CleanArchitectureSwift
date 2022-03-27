@@ -113,6 +113,7 @@
 		BBF2C97527F096F8001D3F6A /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2C97427F096F8001D3F6A /* LoginPresenterTests.swift */; };
 		BBF2C97827F0DE18001D3F6A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2C97727F0DE18001D3F6A /* LoginViewModel.swift */; };
 		BBF2C97A27F0DEE6001D3F6A /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2C97927F0DEE6001D3F6A /* LoginPresenter.swift */; };
+		BBF2C97C27F0E436001D3F6A /* AuthenticationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2C97B27F0E436001D3F6A /* AuthenticationSpy.swift */; };
 		BBF9AF0C27B7337900EDA0B1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF9AF0B27B7337900EDA0B1 /* Model.swift */; };
 		BBF9AF0E27B7342600EDA0B1 /* RemoteAddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF9AF0D27B7342600EDA0B1 /* RemoteAddAccount.swift */; };
 /* End PBXBuildFile section */
@@ -433,6 +434,7 @@
 		BBF2C97427F096F8001D3F6A /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
 		BBF2C97727F0DE18001D3F6A /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		BBF2C97927F0DEE6001D3F6A /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		BBF2C97B27F0E436001D3F6A /* AuthenticationSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationSpy.swift; sourceTree = "<group>"; };
 		BBF9AF0B27B7337900EDA0B1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		BBF9AF0D27B7342600EDA0B1 /* RemoteAddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -854,6 +856,7 @@
 			isa = PBXGroup;
 			children = (
 				BB39045927C0AF5B00B973D3 /* AddAccountSpy.swift */,
+				BBF2C97B27F0E436001D3F6A /* AuthenticationSpy.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -1732,6 +1735,7 @@
 				BB39042727BEFDCD00B973D3 /* SignupPresenterTests.swift in Sources */,
 				BB39044727C09E7900B973D3 /* TestHelpers.swift in Sources */,
 				BB39046227C0B17800B973D3 /* TestFactories.swift in Sources */,
+				BBF2C97C27F0E436001D3F6A /* AuthenticationSpy.swift in Sources */,
 				BB20F85A27EBFDE7009BD229 /* ValidationSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
