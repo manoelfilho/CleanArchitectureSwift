@@ -2,7 +2,7 @@ import Foundation
 import Domain
 import Data
 
-//Simula um HttpPost. É um mok de alguma classe que nao existe
+//Simula um HttpPost. É um mock de alguma classe que nao existe
 public class HttpClientSpy: HttpPostClient {
     var urls = [URL]()
     var data: Data?

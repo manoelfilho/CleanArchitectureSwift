@@ -16,3 +16,7 @@ func makeAddAccountModel() -> AddAccountModel {
 func makeAccountModel() -> AccountModel {
     return AccountModel(id: 1, username: "any", email: "email@email.com", provider: "local", confirmed: true, blocked: false, createdAt: "data", updatedAt: "data")
 }
+
+func makeAuthenticationModel() -> AuthenticationModel {
+    return AuthenticationModel(email: "email@email.com", password: "senha")
+}

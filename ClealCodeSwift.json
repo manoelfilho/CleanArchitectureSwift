@@ -15,9 +15,34 @@
       "responses": [
         {
           "uuid": "0ca8fb05-c42c-4bfe-8d7f-842f33024f09",
-          "body": "{\n   \"id\":1,\n   \"username\":\"manoel\",\n   \"email\":\"email@email.com\",\n   \"provider\": \"local\",\n   \"confirmed\":true,\n   \"blocked\":false,\n   \"password\":\"senha\",\n   \"createdAt\":\"data\",\n   \"deletedAt\":\"data\",\n   \"role\":1\n}",
+          "body": "{\n   \"id\":1,\n   \"username\":\"manoel\",\n   \"email\":\"email@email.com\",\n   \"provider\": \"local\",\n   \"confirmed\":true,\n   \"blocked\":false,\n   \"createdAt\":\"data\",\n   \"deletedAt\":\"data\",\n   \"role\":1\n}",
           "latency": 0,
           "statusCode": 201,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
+    },
+    {
+      "uuid": "58ae333f-208a-4d7b-a0fd-4672ab53ca39",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "authenticate",
+      "responses": [
+        {
+          "uuid": "1902220d-df72-4d96-b04e-8a4587585085",
+          "body": "{\n   \"id\":1,\n   \"username\":\"manoel\",\n   \"email\":\"email@email.com\",\n   \"provider\": \"local\",\n   \"confirmed\":true,\n   \"blocked\":false,\n   \"createdAt\":\"data\",\n   \"deletedAt\":\"data\",\n   \"role\":1\n}",
+          "latency": 0,
+          "statusCode": 200,
           "label": "",
           "headers": [],
           "filePath": "",
