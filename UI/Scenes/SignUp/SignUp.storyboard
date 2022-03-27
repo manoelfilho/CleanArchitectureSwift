@@ -67,7 +67,7 @@
                             </imageView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="I85-44-wkR" userLabel="loading">
                                 <rect key="frame" x="188.5" y="115.5" width="37" height="37"/>
-                                <color key="color" name="BG"/>
+                                <color key="color" name="Yellow"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cadastro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9P-1y-LXW" userLabel="cadastro">
                                 <rect key="frame" x="134.5" y="239" width="145" height="42"/>
