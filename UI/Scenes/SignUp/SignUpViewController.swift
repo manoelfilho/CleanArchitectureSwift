@@ -1,10 +1,3 @@
-//
-//  SignupViewController.swift
-//  UI
-//
-//  Created by Manoel Filho on 19/02/22.
-//
-
 import Foundation
 import UIKit
 import Presenter
@@ -28,8 +21,6 @@ public final class SignUpViewController: UIViewController, Storyboarded {
     }
     
     private func configure(){
-        //title = "4Devs"
-        
         usernameTextField.clipsToBounds = true
         emailTextField.clipsToBounds = true
         passwordTextField.clipsToBounds = true

@@ -85,6 +85,7 @@
 		BBC8ADBF27F0F8FC0050BC13 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBC8ADBE27F0F8FC0050BC13 /* Login.storyboard */; };
 		BBC8ADC327F0F99E0050BC13 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8ADC227F0F99E0050BC13 /* LoginViewControllerTests.swift */; };
 		BBC8ADC527F0FA100050BC13 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8ADC427F0FA100050BC13 /* LoginViewController.swift */; };
+		BBC8ADC627F100210050BC13 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D20F127B838EA000AFD66 /* TestHelpers.swift */; };
 		BBC8AE1427C7162000676A75 /* WeakVarProxies.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8AE1327C7162000676A75 /* WeakVarProxies.swift */; };
 		BBC8AE1927C7E23100676A75 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8AE1827C7E23100676A75 /* Enviroment.swift */; };
 		BBDB113D27EF45B00034028C /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDB113C27EF45B00034028C /* RoundedTextField.swift */; };
@@ -1786,6 +1787,7 @@
 				BBC8ADC327F0F99E0050BC13 /* LoginViewControllerTests.swift in Sources */,
 				BB566B1D27C125B800B66934 /* SignUpViewControllerTests.swift in Sources */,
 				BB223BF527C1792D0053299D /* TestExtensions.swift in Sources */,
+				BBC8ADC627F100210050BC13 /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,7 @@
         <!--SignUp-->
         <scene sceneID="jrU-OD-fdW">
             <objects>
-                <viewController storyboardIdentifier="SignUpViewController" id="I8r-E7-ufd" userLabel="SignUp" customClass="LoginViewController" customModule="UI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="I8r-E7-ufd" userLabel="SignUp" customClass="LoginViewController" customModule="UI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jth-Ip-wwT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,8 +120,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="A9a-Zw-dXq" id="GrM-mg-5qI"/>
                         <outlet property="loadingIndicator" destination="I85-44-wkR" id="500-ud-RzR"/>
                         <outlet property="loginButton" destination="5dZ-z8-l5r" id="qhh-rS-mZG"/>
+                        <outlet property="passwordTextField" destination="h5A-WL-ehm" id="Qox-pB-dfk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xc5-YW-uJj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

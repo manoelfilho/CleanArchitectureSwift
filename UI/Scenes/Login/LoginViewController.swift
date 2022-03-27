@@ -1,10 +1,3 @@
-//
-//  SignupViewController.swift
-//  UI
-//
-//  Created by Manoel Filho on 19/02/22.
-//
-
 import Foundation
 import UIKit
 import Presenter
@@ -15,13 +8,24 @@ public final class LoginViewController: UIViewController, Storyboarded {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var loginButton: UIButton!
     
+    @IBOutlet weak var emailTextField: RoundedTextField!
+    @IBOutlet weak var passwordTextField: RoundedTextField!
+    
+    public var login: ((LoginViewModel) -> Void)?
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         configure()
     }
     
     private func configure(){
+        loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         hideKeyboardOnTap()
+    }
+    
+    @objc private func loginButtonTapped(){
+        let viewModel = LoginViewModel(email: self.emailTextField.text, password: passwordTextField.text)
+        login?(viewModel)
     }
     
 }
