@@ -110,6 +110,9 @@
 		BBF2C96E27F0846F001D3F6A /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2C96D27F0846F001D3F6A /* Authentication.swift */; };
 		BBF2C97027F08659001D3F6A /* RemoteAuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2C96F27F08659001D3F6A /* RemoteAuthenticationTests.swift */; };
 		BBF2C97227F0886F001D3F6A /* RemoteAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2C97127F0886F001D3F6A /* RemoteAuthentication.swift */; };
+		BBF2C97527F096F8001D3F6A /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2C97427F096F8001D3F6A /* LoginPresenterTests.swift */; };
+		BBF2C97827F0DE18001D3F6A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2C97727F0DE18001D3F6A /* LoginViewModel.swift */; };
+		BBF2C97A27F0DEE6001D3F6A /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2C97927F0DEE6001D3F6A /* LoginPresenter.swift */; };
 		BBF9AF0C27B7337900EDA0B1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF9AF0B27B7337900EDA0B1 /* Model.swift */; };
 		BBF9AF0E27B7342600EDA0B1 /* RemoteAddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF9AF0D27B7342600EDA0B1 /* RemoteAddAccount.swift */; };
 /* End PBXBuildFile section */
@@ -427,6 +430,9 @@
 		BBF2C96D27F0846F001D3F6A /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		BBF2C96F27F08659001D3F6A /* RemoteAuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthenticationTests.swift; sourceTree = "<group>"; };
 		BBF2C97127F0886F001D3F6A /* RemoteAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteAuthentication.swift; sourceTree = "<group>"; };
+		BBF2C97427F096F8001D3F6A /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
+		BBF2C97727F0DE18001D3F6A /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		BBF2C97927F0DEE6001D3F6A /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		BBF9AF0B27B7337900EDA0B1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		BBF9AF0D27B7342600EDA0B1 /* RemoteAddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -778,6 +784,7 @@
 		BB39042027BEFD4300B973D3 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				BBF2C97627F0DDBF001D3F6A /* Login */,
 				BB39044A27C0ABCA00B973D3 /* Signup */,
 			);
 			path = Presenters;
@@ -795,6 +802,7 @@
 		BB39042827BEFE7100B973D3 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				BBF2C97327F096E6001D3F6A /* Login */,
 				BB39044F27C0ADC700B973D3 /* Signup */,
 			);
 			path = Presenters;
@@ -1074,6 +1082,23 @@
 				BBEEDF8C27C2CFC000CF9774 /* Constants.swift */,
 			);
 			path = Keys;
+			sourceTree = "<group>";
+		};
+		BBF2C97327F096E6001D3F6A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BBF2C97427F096F8001D3F6A /* LoginPresenterTests.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BBF2C97627F0DDBF001D3F6A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BBF2C97727F0DE18001D3F6A /* LoginViewModel.swift */,
+				BBF2C97927F0DEE6001D3F6A /* LoginPresenter.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		BBF9AF1127B737E100EDA0B1 /* UseCases */ = {
@@ -1687,9 +1712,11 @@
 			files = (
 				BB39042527BEFD9500B973D3 /* SignUpPresenter.swift in Sources */,
 				BB39044C27C0ABFF00B973D3 /* SignUpViewModel.swift in Sources */,
+				BBF2C97827F0DE18001D3F6A /* LoginViewModel.swift in Sources */,
 				BB39044927C0A06900B973D3 /* LoadingView.swift in Sources */,
 				BB39042327BEFD6B00B973D3 /* AlertView.swift in Sources */,
 				BB20F85627EBFD13009BD229 /* Validation.swift in Sources */,
+				BBF2C97A27F0DEE6001D3F6A /* LoginPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1698,6 +1725,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB39045227C0AE9100B973D3 /* AlertViewSpy.swift in Sources */,
+				BBF2C97527F096F8001D3F6A /* LoginPresenterTests.swift in Sources */,
 				BB39045A27C0AF5B00B973D3 /* AddAccountSpy.swift in Sources */,
 				BB39044627C0911B00B973D3 /* AccountModelFactory.swift in Sources */,
 				BB39045727C0AF1B00B973D3 /* LoadingViewSpy.swift in Sources */,
