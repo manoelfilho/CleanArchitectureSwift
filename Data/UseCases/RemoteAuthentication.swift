@@ -11,8 +11,16 @@ public final class RemoteAuthentication {
         self.httpClient = httpClient
     }
     
-    public func authenticate(authenticationModel: AuthenticationModel) {
-        httpClient.post(to: self.url, with: authenticationModel.toData()) { _ in }
+    public func authenticate(authenticationModel: AuthenticationModel, completion: @escaping (Authentication.Result) -> Void){
+        
+        httpClient.post(to: url, with: authenticationModel.toData()) { result in
+            switch result {
+                case .success:
+                    break
+                case .failure:
+                    completion(.failure(.unexpected))
+            }
+        }
     }
     
 }
