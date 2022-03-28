@@ -3,29 +3,6 @@ import UIKit
 import Presenter
 @testable import UI
 
-public final class WelcomeRouter {
-    
-    private let nav: NavigationController
-    private let loginFactory: () -> LoginViewController
-    private let signUpFactory: () -> SignUpViewController
-    
-    public init(nav: NavigationController,
-                loginFactory: @escaping () -> LoginViewController,
-                signUpFactory: @escaping () -> SignUpViewController){
-        self.nav = nav
-        self.loginFactory = loginFactory
-        self.signUpFactory = signUpFactory
-    }
-    
-    public func goToLogin(){
-        nav.pushViewController(loginFactory(), animated: true)
-    }
-    
-    public func goToSignup(){
-        nav.pushViewController(signUpFactory(), animated: true)
-    }
-}
-
 class WelcomeRouterTests: XCTestCase {
     
     func test_goToLogin_calls_nav_with_correct_vc(){

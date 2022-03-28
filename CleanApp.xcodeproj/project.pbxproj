@@ -86,6 +86,7 @@
 		BBC826E427F10C7D006D47CB /* WelcomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC826E327F10C7D006D47CB /* WelcomeViewControllerTests.swift */; };
 		BBC826E627F10CD6006D47CB /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC826E527F10CD6006D47CB /* WelcomeViewController.swift */; };
 		BBC826E827F12BDB006D47CB /* WelcomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC826E727F12BDB006D47CB /* WelcomeRouterTests.swift */; };
+		BBC826EA27F13435006D47CB /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC826E927F13435006D47CB /* WelcomeRouter.swift */; };
 		BBC8ADBF27F0F8FC0050BC13 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBC8ADBE27F0F8FC0050BC13 /* Login.storyboard */; };
 		BBC8ADC327F0F99E0050BC13 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8ADC227F0F99E0050BC13 /* LoginViewControllerTests.swift */; };
 		BBC8ADC527F0FA100050BC13 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8ADC427F0FA100050BC13 /* LoginViewController.swift */; };
@@ -421,6 +422,7 @@
 		BBC826E327F10C7D006D47CB /* WelcomeViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewControllerTests.swift; sourceTree = "<group>"; };
 		BBC826E527F10CD6006D47CB /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		BBC826E727F12BDB006D47CB /* WelcomeRouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeRouterTests.swift; sourceTree = "<group>"; };
+		BBC826E927F13435006D47CB /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
 		BBC8ADBE27F0F8FC0050BC13 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BBC8ADC227F0F99E0050BC13 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
 		BBC8ADC427F0FA100050BC13 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -1015,6 +1017,7 @@
 			children = (
 				BBC826E027F109CE006D47CB /* Welcome.storyboard */,
 				BBC826E527F10CD6006D47CB /* WelcomeViewController.swift */,
+				BBC826E927F13435006D47CB /* WelcomeRouter.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -1803,6 +1806,7 @@
 				BBC8ADC527F0FA100050BC13 /* LoginViewController.swift in Sources */,
 				BB223BF827C190B00053299D /* UIViewControllerExtensions.swift in Sources */,
 				BB223BFA27C193C90053299D /* Storyboarded.swift in Sources */,
+				BBC826EA27F13435006D47CB /* WelcomeRouter.swift in Sources */,
 				BBDB113F27EF47750034028C /* NavigationController.swift in Sources */,
 				BB566B3027C135C300B66934 /* SignUpViewController.swift in Sources */,
 				BBDB113D27EF45B00034028C /* RoundedTextField.swift in Sources */,
