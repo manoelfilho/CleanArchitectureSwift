@@ -23,7 +23,7 @@ extension WelcomeViewControllerTests {
     func makeSut() -> (sut: WelcomeViewController, buttonSpy: ButtonSpy) {
         let buttonSpy = ButtonSpy()
         let sut = WelcomeViewController.instantiate()
-        sut.login = buttonSpy.onClick
+        sut.authenticate = buttonSpy.onClick
         sut.signUp = buttonSpy.onClick
         sut.loadViewIfNeeded()
         checkMemoryLeak(for: sut)

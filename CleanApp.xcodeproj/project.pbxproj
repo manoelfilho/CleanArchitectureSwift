@@ -87,6 +87,8 @@
 		BBC826E627F10CD6006D47CB /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC826E527F10CD6006D47CB /* WelcomeViewController.swift */; };
 		BBC826E827F12BDB006D47CB /* WelcomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC826E727F12BDB006D47CB /* WelcomeRouterTests.swift */; };
 		BBC826EA27F13435006D47CB /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC826E927F13435006D47CB /* WelcomeRouter.swift */; };
+		BBC826EC27F14143006D47CB /* LoginCotrollerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC826EB27F14143006D47CB /* LoginCotrollerFactory.swift */; };
+		BBC826EE27F14283006D47CB /* RemoteAuthenticationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC826ED27F14283006D47CB /* RemoteAuthenticationFactory.swift */; };
 		BBC8ADBF27F0F8FC0050BC13 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBC8ADBE27F0F8FC0050BC13 /* Login.storyboard */; };
 		BBC8ADC327F0F99E0050BC13 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8ADC227F0F99E0050BC13 /* LoginViewControllerTests.swift */; };
 		BBC8ADC527F0FA100050BC13 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8ADC427F0FA100050BC13 /* LoginViewController.swift */; };
@@ -423,6 +425,8 @@
 		BBC826E527F10CD6006D47CB /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		BBC826E727F12BDB006D47CB /* WelcomeRouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeRouterTests.swift; sourceTree = "<group>"; };
 		BBC826E927F13435006D47CB /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
+		BBC826EB27F14143006D47CB /* LoginCotrollerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCotrollerFactory.swift; sourceTree = "<group>"; };
+		BBC826ED27F14283006D47CB /* RemoteAuthenticationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthenticationFactory.swift; sourceTree = "<group>"; };
 		BBC8ADBE27F0F8FC0050BC13 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BBC8ADC227F0F99E0050BC13 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
 		BBC8ADC427F0FA100050BC13 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -983,6 +987,7 @@
 			children = (
 				BB95F24227EE62840076ABAB /* ApiUrlFactory.swift */,
 				BB93172927C5865A005E044D /* RemoteAddAccountFactory.swift */,
+				BBC826ED27F14283006D47CB /* RemoteAuthenticationFactory.swift */,
 			);
 			path = Http;
 			sourceTree = "<group>";
@@ -1000,6 +1005,7 @@
 			isa = PBXGroup;
 			children = (
 				BB93172C27C5870D005E044D /* SignUpControllerFactory.swift */,
+				BBC826EB27F14143006D47CB /* LoginCotrollerFactory.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1883,11 +1889,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC826EE27F14283006D47CB /* RemoteAuthenticationFactory.swift in Sources */,
 				BB8DD69127C877D800669702 /* MainQueueDispatchDecorator.swift in Sources */,
 				BBEEDF4227C2CA7400CF9774 /* AppDelegate.swift in Sources */,
 				BB95F24627EE632E0076ABAB /* AlamofireAdapterFactoryFactory.swift in Sources */,
 				BBEEDF4427C2CA7400CF9774 /* SceneDelegate.swift in Sources */,
 				BBC8AE1927C7E23100676A75 /* Enviroment.swift in Sources */,
+				BBC826EC27F14143006D47CB /* LoginCotrollerFactory.swift in Sources */,
 				BB93172A27C5865A005E044D /* RemoteAddAccountFactory.swift in Sources */,
 				BB95F24327EE62840076ABAB /* ApiUrlFactory.swift in Sources */,
 				BBEEDF8D27C2CFC000CF9774 /* Constants.swift in Sources */,

@@ -23,7 +23,7 @@ public class LoginPresenter {
         self.loadingView = loadingView
     }
     
-    public func login(viewModel: LoginRequest){
+    public func authenticate(viewModel: LoginRequest){
        
         if let message = validation.validate(data: viewModel.toJson()) {
         

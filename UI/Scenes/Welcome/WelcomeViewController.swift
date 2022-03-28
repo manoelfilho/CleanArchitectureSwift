@@ -2,15 +2,15 @@ import Foundation
 import UIKit
 import Presenter
 
-class WelcomeViewController: UIViewController, Storyboarded {
+public final class WelcomeViewController: UIViewController, Storyboarded {
     
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     
-    public var login: (() -> Void)?
+    public var authenticate: (() -> Void)?
     public var signUp: (() -> Void)?
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         configure()
     }
@@ -22,7 +22,7 @@ class WelcomeViewController: UIViewController, Storyboarded {
     }
     
     @objc private func loginButtonTapped(){
-        login?()
+        authenticate?()
     }
     @objc private func signUpButtonTapped(){
         signUp?()

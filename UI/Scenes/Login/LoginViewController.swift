@@ -11,7 +11,7 @@ public final class LoginViewController: UIViewController, Storyboarded {
     @IBOutlet weak var emailTextField: RoundedTextField!
     @IBOutlet weak var passwordTextField: RoundedTextField!
     
-    public var login: ((LoginRequest) -> Void)?
+    public var authenticate: ((LoginRequest) -> Void)?
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,13 +19,16 @@ public final class LoginViewController: UIViewController, Storyboarded {
     }
     
     private func configure(){
+        emailTextField.clipsToBounds = true
+        passwordTextField.clipsToBounds = true
+        
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         hideKeyboardOnTap()
     }
     
     @objc private func loginButtonTapped(){
         let viewModel = LoginRequest(email: self.emailTextField.text, password: passwordTextField.text)
-        login?(viewModel)
+        authenticate?(viewModel)
     }
     
 }

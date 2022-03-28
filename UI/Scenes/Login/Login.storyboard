@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I8r-E7-ufd">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -19,19 +19,25 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="56w-qW-1Mj" userLabel="input_group">
                                 <rect key="frame" x="20" y="352" width="374" height="110"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A9a-Zw-dXq" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tGb-wH-kCS" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" name="Text1"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="zn2-eL-YgV"/>
+                                            <constraint firstAttribute="height" constant="50" id="w5I-vg-wen"/>
                                         </constraints>
+                                        <color key="textColor" name="Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h5A-WL-ehm" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kYY-sQ-M32" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="60" width="374" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" name="Text1"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="ltT-1I-3Fk"/>
+                                            <constraint firstAttribute="height" constant="50" id="o0A-gX-D9d"/>
                                         </constraints>
+                                        <color key="textColor" name="Text1"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
@@ -73,23 +79,6 @@
                                 <color key="textColor" name="Text1"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2DJ-W3-f5r" userLabel="bottom_description">
-                                <rect key="frame" x="20" y="547" width="374" height="20.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Não tem uma conta?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQl-OS-xmA" userLabel="have_account">
-                                        <rect key="frame" x="0.0" y="0.0" width="187" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" name="Text1"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Faça seu cadastro" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2v-cv-4rh" userLabel="do_login">
-                                        <rect key="frame" x="187" y="0.0" width="187" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <color key="textColor" name="Color"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pNc-Of-4sq" userLabel="safe"/>
                         <color key="backgroundColor" name="BG"/>
@@ -103,14 +92,10 @@
                             <constraint firstItem="56w-qW-1Mj" firstAttribute="top" secondItem="Bib-Ju-bMx" secondAttribute="bottom" constant="15" id="JIm-ow-cN9"/>
                             <constraint firstItem="pNc-Of-4sq" firstAttribute="trailing" secondItem="Bib-Ju-bMx" secondAttribute="trailing" constant="20" id="MYa-T3-jZu"/>
                             <constraint firstItem="Bib-Ju-bMx" firstAttribute="leading" secondItem="pNc-Of-4sq" secondAttribute="leading" constant="20" id="MvK-uZ-48Z"/>
-                            <constraint firstItem="2DJ-W3-f5r" firstAttribute="leading" secondItem="pNc-Of-4sq" secondAttribute="leading" constant="20" id="NeV-hT-gXh"/>
-                            <constraint firstItem="2DJ-W3-f5r" firstAttribute="top" secondItem="5dZ-z8-l5r" secondAttribute="bottom" constant="20" id="OFn-9I-9cO"/>
                             <constraint firstItem="pNc-Of-4sq" firstAttribute="trailing" secondItem="56w-qW-1Mj" secondAttribute="trailing" constant="20" id="Typ-Ia-Ssw"/>
                             <constraint firstItem="9ee-rU-Nub" firstAttribute="centerY" secondItem="I85-44-wkR" secondAttribute="centerY" id="Vaq-o0-BOc"/>
-                            <constraint firstItem="2DJ-W3-f5r" firstAttribute="centerX" secondItem="jth-Ip-wwT" secondAttribute="centerX" id="X85-jF-KCN"/>
                             <constraint firstItem="5dZ-z8-l5r" firstAttribute="top" secondItem="56w-qW-1Mj" secondAttribute="bottom" constant="15" id="Xrj-Z3-ITS"/>
                             <constraint firstItem="Bib-Ju-bMx" firstAttribute="top" secondItem="N9P-1y-LXW" secondAttribute="bottom" constant="15" id="Z2T-ud-ckL"/>
-                            <constraint firstItem="pNc-Of-4sq" firstAttribute="trailing" secondItem="2DJ-W3-f5r" secondAttribute="trailing" constant="20" id="ZRg-gL-aqf"/>
                             <constraint firstItem="5dZ-z8-l5r" firstAttribute="leading" secondItem="pNc-Of-4sq" secondAttribute="leading" constant="20" id="ZfI-KU-Un5"/>
                             <constraint firstItem="5dZ-z8-l5r" firstAttribute="centerX" secondItem="jth-Ip-wwT" secondAttribute="centerX" id="cdS-IZ-fYn"/>
                             <constraint firstItem="I85-44-wkR" firstAttribute="centerY" secondItem="9ee-rU-Nub" secondAttribute="centerY" id="e6O-gj-wCe"/>
@@ -120,10 +105,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="A9a-Zw-dXq" id="GrM-mg-5qI"/>
+                        <outlet property="emailTextField" destination="tGb-wH-kCS" id="wKY-jD-qwX"/>
                         <outlet property="loadingIndicator" destination="I85-44-wkR" id="500-ud-RzR"/>
                         <outlet property="loginButton" destination="5dZ-z8-l5r" id="qhh-rS-mZG"/>
-                        <outlet property="passwordTextField" destination="h5A-WL-ehm" id="Qox-pB-dfk"/>
+                        <outlet property="passwordTextField" destination="kYY-sQ-M32" id="dDu-s3-brw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xc5-YW-uJj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

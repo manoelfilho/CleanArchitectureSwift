@@ -42,28 +42,28 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0Hk-K2-3sP">
                                 <rect key="frame" x="20" y="366.5" width="374" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gC-n0-fat">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAJ-FW-9JG">
                                         <rect key="frame" x="0.0" y="0.0" width="177" height="50"/>
-                                        <color key="backgroundColor" name="Yellow"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="otZ-C2-KaD"/>
+                                            <constraint firstAttribute="height" constant="50" id="X6t-Td-dJH"/>
                                         </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Login">
-                                            <backgroundConfiguration key="background" cornerRadius="25"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Login">
+                                            <backgroundConfiguration key="background" cornerRadius="25">
+                                                <color key="backgroundColor" name="Yellow"/>
+                                            </backgroundConfiguration>
                                         </buttonConfiguration>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N51-XW-xCe">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQn-rW-V7D">
                                         <rect key="frame" x="197" y="0.0" width="177" height="50"/>
-                                        <color key="backgroundColor" name="Yellow"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="qab-vg-8Tl"/>
+                                            <constraint firstAttribute="height" constant="50" id="9mF-L8-rfV"/>
                                         </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Criar conta">
-                                            <backgroundConfiguration key="background" cornerRadius="25"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Cadastro">
+                                            <backgroundConfiguration key="background" cornerRadius="25">
+                                                <color key="backgroundColor" name="Yellow"/>
+                                            </backgroundConfiguration>
                                         </buttonConfiguration>
                                     </button>
                                 </subviews>
@@ -89,8 +89,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="loginButton" destination="6gC-n0-fat" id="6Yl-0j-vCL"/>
-                        <outlet property="signUpButton" destination="N51-XW-xCe" id="aV3-aj-h8x"/>
+                        <outlet property="loginButton" destination="KAJ-FW-9JG" id="tua-eE-D47"/>
+                        <outlet property="signUpButton" destination="nQn-rW-V7D" id="Zqr-8v-yao"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xc5-YW-uJj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
