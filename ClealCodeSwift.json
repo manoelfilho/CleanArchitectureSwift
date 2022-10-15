@@ -11,11 +11,11 @@
       "uuid": "133f83fe-27f5-4bed-9814-84d679f3198f",
       "documentation": "Adicionar um usuário",
       "method": "post",
-      "endpoint": "signup",
+      "endpoint": "signup_clean_app2",
       "responses": [
         {
           "uuid": "0ca8fb05-c42c-4bfe-8d7f-842f33024f09",
-          "body": "{\n   \"id\":1,\n   \"username\":\"manoel\",\n   \"email\":\"email@email.com\",\n   \"provider\": \"local\",\n   \"confirmed\":true,\n   \"blocked\":false,\n   \"createdAt\":\"data\",\n   \"deletedAt\":\"data\",\n   \"role\":1\n}",
+          "body": "{\n   \"id\":\"1234567890\",\n   \"name\": \"any-name\",\n   \"email\": \"any-email@email.com\",\n   \"password\": \"any-password\"\n} ",
           "latency": 0,
           "statusCode": 201,
           "label": "",
@@ -60,12 +60,12 @@
     {
       "uuid": "d8d10b47-1417-47c8-ad05-6b6bd771ccea",
       "documentation": "Teste",
-      "method": "get",
-      "endpoint": "",
+      "method": "post",
+      "endpoint": "signup_clean_app1",
       "responses": [
         {
           "uuid": "801291bd-3af0-45bf-8a7e-84382529f4d1",
-          "body": "{\n   \"status\":\"Ok\"\n}",
+          "body": "{\n   \"id\":1,\n   \"username\":\"manoel\",\n   \"email\":\"email@email.com\",\n   \"provider\": \"local\",\n   \"confirmed\":true,\n   \"blocked\":false,\n   \"createdAt\":\"data\",\n   \"deletedAt\":\"data\",\n   \"role\":1\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",

@@ -14,3 +14,4 @@ public extension Model {
         return try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]
     }
 }
+ 

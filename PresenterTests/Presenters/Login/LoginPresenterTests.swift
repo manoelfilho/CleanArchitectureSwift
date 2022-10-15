@@ -8,7 +8,7 @@ class LoginPresenterTests: XCTestCase{
         let validationSpy = ValidationSpy()
         let sut = makeSut(validation: validationSpy)
         let viewModel = makeLoginViewModel()
-        sut.login(viewModel: viewModel)
+        sut.authenticate(viewModel: viewModel)
         XCTAssertTrue(NSDictionary(dictionary: validationSpy.data!).isEqual(to: viewModel.toJson()!))
     }
     
@@ -22,14 +22,14 @@ class LoginPresenterTests: XCTestCase{
             exp.fulfill()
         }
         validationSpy.simulateError()
-        sut.login(viewModel: makeLoginViewModel())
+        sut.authenticate(viewModel: makeLoginViewModel())
         wait(for: [exp], timeout: 1)
     }
     
     func test_login_should_call_authentication_with_correct_data(){
         let authenticationSpy = AuthenticationSpy()
         let sut = makeSut(authentication: authenticationSpy)
-        sut.login(viewModel: makeLoginViewModel())
+        sut.authenticate(viewModel: makeLoginViewModel())
         XCTAssertEqual(authenticationSpy.authenticationModel, makeAuthenticationModel())
     }
     
@@ -42,7 +42,7 @@ class LoginPresenterTests: XCTestCase{
             XCTAssertEqual(viewModel, AlertViewModel(title: "Erro", message: "Algo inesperado aconteceu. Tente em alguns instantes"))
             exp.fulfill()
         }
-        sut.login(viewModel: makeLoginViewModel())
+        sut.authenticate(viewModel: makeLoginViewModel())
         authenticationSpy.completeWithError(.unexpected)
         wait(for: [exp], timeout: 1)
     }
