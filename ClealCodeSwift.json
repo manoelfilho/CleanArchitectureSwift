@@ -26,6 +26,20 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false
+        },
+        {
+          "uuid": "d3e1955a-6fad-41ce-bbad-23d59f0d4cca",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
         }
       ],
       "enabled": true,
