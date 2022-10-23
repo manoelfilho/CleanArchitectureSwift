@@ -43,6 +43,7 @@ extension SignUpViewController: LoadingView {
             view.isUserInteractionEnabled = false //desabilita a interacão com a tela quando o loading está ativo
             loadingIndicator.startAnimating()
         } else {
+            view.isUserInteractionEnabled = true
             loadingIndicator.stopAnimating()
         }
     }

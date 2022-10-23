@@ -16,7 +16,7 @@ extension Storyboarded where Self: UIViewController {
     
     public static func instantiate() -> Self {
         let vcName = String(describing: self)
-        let sbName = vcName.components(separatedBy: "ViewController")[0]
+        let sbName = vcName.components(separatedBy: "ViewController")[0] //considerando que todos os arquivos terão o mesmo nome para Storyboard e Controller: (SignUp e SignUpViewController)
         let bundle = Bundle(for: Self.self)
         let sb = UIStoryboard(name: sbName, bundle: bundle)
         return sb.instantiateViewController(withIdentifier: vcName) as! Self
